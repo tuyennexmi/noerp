@@ -1,0 +1,102 @@
+﻿table.tbDetail
+{
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse: collapse;
+}
+
+table.tbDetail td 
+{   
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse:collapse;
+}
+
+table.tbDetail td.all
+{   
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse: collapse;
+}
+
+table.tbDetail td.top
+{   
+    padding: 1px 1px 1px 1px;
+    border-top: solid 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
+    border-collapse: collapse;
+}
+
+table.tbDetail td.dotted
+{   
+	padding: 1px 1px 1px 1px;
+    border-top: dotted 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
+    border-collapse: collapse;
+}
+
+table.tbDetail th
+{
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    border: solid 1px #000000;
+}
+
+@media print
+{
+    .toBreak
+    {
+		page-break-after: auto;
+	}
+    table.tbDetail
+    {
+        padding: 1px 1px 1px 1px;
+        border: solid 1px #000000;
+        border-collapse: collapse;
+    }
+
+    table.tbDetail td 
+    {   
+        padding: 1px 1px 1px 1px;
+        border: solid 1px #000000;
+        border-collapse:collapse;
+    }
+
+    table.tbDetail td.all
+    {   
+        padding: 1px 1px 1px 1px;
+        border: solid 1px #000000;
+        border-collapse: collapse;
+    }
+
+    table.tbDetail td.top
+    {   
+        padding: 1px 1px 1px 1px;
+        border-top: solid 1px #000000;
+        border-left: solid 1px #000000;
+        border-right: solid 1px #000000;
+        border-bottom: dotted 1px #000000;
+        border-collapse: collapse;
+    }
+
+    table.tbDetail td.dotted
+    {   
+	    padding: 1px 1px 1px 1px;
+        border-top: dotted 1px #000000;
+        border-left: solid 1px #000000;
+        border-right: solid 1px #000000;
+        border-bottom: dotted 1px #000000;
+        border-collapse: collapse;
+    }
+
+    table.tbDetail th
+    {
+        padding: 1px 1px 1px 1px;
+        text-align: center;
+        border: solid 1px #000000;
+    }
+}

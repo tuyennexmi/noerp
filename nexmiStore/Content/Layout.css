@@ -1,0 +1,1067 @@
+﻿/*Hinh anh*/
+
+.imagebox
+{
+     max-width:250px; 
+     border:1px solid Silver;
+     max-height:160px;
+     margin: 6px;     
+     border-radius: 3px;
+     float:left;
+     padding: 6px;
+     min-height: 66px;
+}
+
+.images
+{
+    max-width:248px; 
+    max-height:150px;
+}
+/* Thông điệp - messages*/
+#divLogs
+{
+    float:left;
+    width:100%;
+}
+.logItem
+{
+    width: 96%;
+    padding: 5px;
+    background-color: #F2F2F2;
+    border: solid 1px rgba(0,0,0,0.03);
+    border-radius: 3px;    
+}
+.logItem ul
+{
+    margin: 0 2px 5px 2px;
+    padding-left: 15px;    
+}
+.logItem ul li
+{
+    padding: 3px;
+}
+
+.comment
+{
+    width: 96%;
+    padding: 5px;
+    background-color: #ddd;
+    border: solid 1px rgba(0,0,0,0.03);
+    border-radius: 3px;    
+}
+.author
+{
+    margin-top:2px;
+    margin-bottom: 02px;    
+    font-size:smaller;
+}
+
+/*****************/
+
+div#TopPanel
+{
+   background-color: orange;
+   height: 39px;
+   top: 0px; left:0px; right: 0px;
+   position: fixed;
+   display: block;
+   z-index: 500 !important;
+}
+
+div#LeftPanel
+{
+    width: 220px;
+    top: 39px; left: 0px; bottom: 0px;
+    float:left;
+    position: fixed;
+    overflow: auto;
+    border-right: 1px solid #aaaaaa; background-color: beige; color: #333333;
+}
+
+div#RightPanel
+{
+    top: 39px; left: 221px; bottom: 0px; right: 0px;
+    /*overflow: auto;*/
+    position: fixed;
+    border-top: none;
+}
+
+div#mainContent
+{
+    border: none;
+}
+
+.divContent
+{
+    min-width:800px;
+    top: 116px; left: 221px; 
+    bottom: 0px; right: 0px;
+    padding: 5px;
+    margin: 0;
+    position: fixed;
+    display:block;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.divActions
+{
+    min-width:800px;
+    padding:3px;
+    border-bottom: 1px solid #aaaaaa; 
+    background-color: beige; color: #333333;
+    position: fixed;
+    top: 39px;
+    left: 221px;
+    right: 0;
+    border-top: none;
+    min-height:69px;
+}
+
+.divContentDetails
+{
+    min-width:800px;
+    padding: 5px;
+    margin: 0;
+    top: 151px;
+    left: 221px;
+    bottom: 0px;
+    right: 0px;
+    position: fixed;
+    display:block;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.divActions > table:first-child
+{
+    width: 100%;
+    height: 60px;
+}
+
+body
+{
+    /*color: #666;*/
+    font-size: .75em;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    background-color:#FFF;
+	/*background-image: url('UI_Images/bg.jpg');*/
+    background-position: left top;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+/** {
+    font-family: Verdana,Arial,sans-serif;
+    font-style: normal;
+    font-size: 12px;        
+}*/
+
+img
+{
+	border: none;	
+}
+
+a:link
+{
+    text-decoration: none;
+    color:Green;
+}
+a:visited
+{
+    color: #505a1c;
+}
+a:hover
+{
+    color: Red;
+}
+a:active
+{
+    color: Green;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 0 0 0 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    margin: 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input[type="text"], input[type="password"] 
+{
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 3px 0px 3px 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+input[readonly]
+{
+	background-color: Silver;
+}
+
+select
+{
+    width: 220px;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 2px 0px 2px 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+textarea
+{
+	border: 1px solid #ccc;
+    padding: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    min-width:260px;
+}
+
+.txtNumber
+{
+    width: 100px; 
+    text-align: right;
+}
+/* TABLE
+----------------------------------------------------------*/
+table
+{
+    border-spacing: 0px;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:40px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000 !important;
+    /*border-color: Red !important;
+    background-color: #ffeeee !important;*/
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label,
+.display-field,
+.editor-field
+{
+    margin: 0.5em 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+table.list
+{
+	width: 100%;
+	padding: 2px 2px 2px 2px;
+	border: solid 1px #e8eef4;
+	border-collapse: collapse;
+}
+table.list tr:hover
+{
+    background-color: #a6e2a6;
+}
+
+table.list td
+{
+	padding: 2px 2px 2px 2px;
+	border: solid 1px #e8eef4;
+}
+table.list th
+{
+	color: White;
+	background-color: #5A9D5E;
+	padding: 2px 2px 2px 2px;
+	border: solid 1px #e8eef4;
+	text-align: left;
+}
+
+.first
+{
+	cursor: pointer;		
+}
+.prev
+{
+	cursor: pointer;		
+}
+.next
+{
+	cursor: pointer;		
+}
+.last
+{
+	cursor: pointer;		
+}
+.ui-datepicker
+{
+	z-index: 1003 !important; /* must be > than popup editor (1002) */
+}
+
+.arrowgreen{
+	width: 99%; /*width of menu*/
+	border-style: solid solid none solid;
+	border-color: #94AA74;
+	border-width: 1px;
+}
+
+.arrowgreen ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+	
+.arrowgreen li a{
+	font: Verdana, Arial, Helvetica, sans-serif 0.8em;
+	display: block;
+	background: transparent url('UI_Images/arrowblue.gif') 100% 0;
+    height: 24px; /*Set to height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	padding: 3px 0 3px 5px;
+	line-height: 24px; /*Set line-height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	text-decoration: none;
+}	
+	
+.arrowgreen li a:link, .arrowgreen li a:visited {
+	color: Navy;
+}
+
+.arrowgreen li a:hover
+{
+	color: Olive;
+	background-position: 100% -32px;
+}
+
+	
+.arrowgreen li a.selected{
+	color: #26370A;
+	background-position: 100% -64px;
+}
+
+.selected
+{
+	color: #26370A;
+	background-position: 100% -64px;
+}
+
+table.detail
+{
+	width: 100%;
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse: collapse;
+}
+
+table.detail td 
+{   
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse:collapse;
+}
+
+table.detail td.all
+{   
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    border-collapse: collapse;
+}
+
+table.detail td.top
+{   
+    padding: 1px 1px 1px 1px;
+    border-top: solid 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
+    border-collapse: collapse;
+}
+
+table.detail td.dotted
+{   
+	padding: 1px 1px 1px 1px;
+    border-top: dotted 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
+    border-collapse: collapse;
+}
+
+table.detail th
+{
+	text-align: center;
+    padding: 1px 1px 1px 1px;
+    border: solid 1px #000000;
+    font-weight: normal;
+}
+
+input.watermark { color: #999; font-style: italic; }
+
+.frmInput
+{
+    width: 100%;
+	border-spacing: 10px;	
+}
+
+.tbTemplate
+{
+    width: 100%;
+	border-spacing: 10px;
+}
+
+.lbright
+{
+	/*text-align: right;*/
+	font-weight: bold;
+	border-right: 1px solid #ccc;
+	vertical-align: top;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 1px;
+	white-space: nowrap;
+}
+
+.actionCols
+{
+    width: 1px;
+	white-space: nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/********************/
+#AjaxLoading {
+    background: none repeat scroll 0 0 #FCF5AA;
+    display: none;
+    padding: 6px 12px;
+    text-align: center;
+    width: auto;
+    z-index: 2147483647;
+    border-radius: 0 0 3px 3px;
+    opacity: 0.9;
+}
+/********************/
+#SitemapBar
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #aaaaaa; background-color: #c9c9c9; color: #333333;
+    padding: 0;
+    border-bottom: none;
+}
+
+#SitemapContent
+{
+    
+}
+
+#SearchContent
+{
+}
+
+
+.divStatus 
+{
+    height: 34px;
+    border-bottom: 1px solid #aaaaaa;
+    margin: -5px -5px 5px -5px;
+    /*border-top: none;*/
+    overflow: hidden;
+    display: block inline;
+}
+
+.divButtons
+{
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 3px;
+    float: left;
+    position: relative;
+}
+
+.windowContent
+{
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    bottom: 42px;
+    right: 0px;
+    overflow: auto;
+    padding-top: 10px;
+}
+
+.windowButtons
+{
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    text-align: right;
+    vertical-align: middle;
+    border-width: 0px;
+    border-top: 1px solid transparent;
+    border-color: #aaa;
+    background-color: #E8E8E8;
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#dadada));
+    background-image: -moz-linear-gradient(top,#fafafa,#dadada);
+    background-image: -o-linear-gradient(top,#fafafa,#dadada);
+}
+
+.windowButtons div
+{
+    margin: 10px;
+}
+
+.divStatusBar
+{
+    margin: 0;
+    height: 34px;
+    float: right;
+    position: relative;
+}
+
+.jqx-grid
+{
+    
+}
+
+#powered
+{
+    text-align: center;
+    bottom: 2px;
+    position: absolute;	
+    font-weight: bold;
+}
+
+/*#divFeed
+{
+    background-color:White;
+    bottom:18px;
+    position:absolute;
+    height:260px;
+    overflow:auto;
+    width:100%;
+}*/
+
+.swfupload {
+    z-index: 100000 !important;
+}
+
+.txtSearch
+{
+    height: 18px;
+}
+
+.btSwitchView
+{
+    width: 16px !important;
+    height: 12px !important;        
+}
+
+ .ulList
+{
+    list-style: none;
+    padding: 0;
+}
+
+.ulList a
+{
+    
+}
+
+.ulList img
+{
+    cursor: pointer;
+    background: #fff;
+    border-color: #aaa #ccc #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    color: inherit;
+    padding: 2px;
+    vertical-align: bottom;    
+}
+
+.ulList li
+{
+    height: 126px;
+    width: 312px;
+    color: inherit;
+    display: inline;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    bottom: 10px;
+}
+
+.ulList .smaller-item
+{
+    height: 120px;
+    width: 230px;    
+}
+
+.ulList .small-item
+{
+    height: 130px;
+    width: 250px;    
+}
+
+.ulList li span
+{
+    position: absolute;
+    bottom: 3px;
+}
+
+.ulList li .avatar
+{
+     width:80px; 
+     height:80px;
+     margin-right: 8px;     
+     border-radius: 3px;
+}
+
+/*********/
+.tbReport
+{    
+    position: relative;
+    border-collapse: collapse;    
+    border: 1px solid #c5c5c5;
+    border-radius: 2px 2px 2px 2px;
+}
+
+
+/*********/
+.tbDetails
+{
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;    
+    border: 1px solid #c5c5c5;
+    border-radius: 2px 2px 2px 2px;
+}
+.tbDetails tr
+{
+    cursor: pointer;
+}
+.tbDetails tr:nth-child(odd)		{ background-color: #ffffff; }
+.tbDetails tr:nth-child(even)		{ background-color: #e8e8e8; }
+.tbDetails tr:nth-child(odd):hover, .tbDetails tr:nth-child(even):hover
+{
+    
+}
+.tbDetails th
+{
+    text-align: left;
+    padding: 5px 4px 5px 4px;
+    border: none;
+    background: #e8e8e8;
+}
+.tbDetails td
+{
+    position: relative;
+    padding: 4px 4px 4px 4px;
+    border: 1px solid #c5c5c5;
+    border-collapse: collapse;
+}
+/*.tbDetails td > div:first-child
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px;
+}*/
+.tbDetails tfoot
+{
+    border-top: 1px solid #000;
+}
+/*********/
+
+.btActions
+{
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;    
+}
+
+.delete
+{
+    background-image: url('UI_Images/16Trash-icon.png')    
+}
+
+.save
+{
+    background-image: url('UI_Images/16Save-icon.png')
+}
+
+.update
+{
+    background-image: url('UI_Images/16Edit-icon.png')
+}
+
+.reset
+{
+    background-image: url('UI_Images/16Refresh-icon.png')
+}
+
+/**************************/
+.progress  
+{
+    margin: 0;
+	list-style: none; 
+	overflow: hidden; 
+}
+.progress li  
+{
+    height: 24px;
+    padding: 8px 5px 8px 8px;
+	float: left;
+	
+}
+
+.progress li a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.progress li:first-child
+{
+    border-left: 1px solid #ccc;
+}
+
+.progress li:last-child
+{
+    
+}
+
+.lbId
+{
+    font-size: large;
+    font-weight: bold;    
+}
+
+.allCorners
+{
+    cursor: default;
+    border: 1px solid #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+}
+
+.ellipsis 
+{
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');
+}
+
+.disabledClass
+{
+    pointer-events: none;
+    cursor: default;
+    display: none;
+}
+
+.tag-close {
+    position: absolute;
+    right: 5px;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 0 2px;
+}
+.tag {
+    padding: 3px 25px 3px 3px;
+    background-color: #ccc;
+    float: left;
+    margin: 2px 4px;
+    border: 1px outset #f2f2f2;
+    position: relative;
+}
+
+.img-12px {
+    width: 14px;
+    border: solid 1px transparent;
+}
+
+.img-12px:hover {
+    border: solid 1px Green;
+}
+
+.unfold
+{
+    width: 220px; padding: 5px;    
+}
+
+.fold
+{
+    padding: 5px;
+}
+
+p.vertical-text {
+	border:0px solid red;
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	white-space:nowrap;
+	display:block;
+	bottom:0;
+	width:20px;
+	height:20px;
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+	font-size:16px;
+	padding-left: 20px;
+}
+
+.task-item
+{
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;    
+    cursor: pointer;
+}
+
+.project-item
+{
+    width: 250px;
+    height: 120px;
+    float: left;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;    
+    cursor: pointer;
+}
+
+.tag-item
+{
+    border: solid 1px #ccc;
+    padding: 1px;
+    border-radius: 3px;
+    background-color: #ddd;    
+}
+
+.dropdown
+{
+    width: 20px; float: right; margin: 0;
+}
+.dropdown dd, .dropdown dt, .dropdown ul  
+{
+    margin:0px; padding:0px; 
+}
+.dropdown dd  
+{
+    position:relative;
+}
+.dropdown a, .dropdown a:visited  
+{
+    color:#000; text-decoration:none; outline:none;
+}
+.dropdown a:hover  
+{
+    color:#5d4617;
+}
+.dropdown dt a:hover, .dropdown dt a:focus  
+{
+    color:#5d4617; 
+}
+.dropdown dt a 
+{
+    
+}
+.dropdown dt a span 
+{
+    cursor:pointer; display:block; padding:5px;
+}
+.dropdown dd ul  
+{
+    background:#fff none repeat scroll 0 0; border:1px solid #d4ca9a; color:#444; display:none;
+    left:0px; padding:5px 0px; position:absolute; top:2px; width:auto; min-width:100px; list-style:none;
+    z-index: 1;
+}
+.dropdown span.value  
+{
+    display:none;
+}
+.dropdown dd ul li a  
+{
+    padding:5px; display:block;
+}
+.dropdown dd ul li a:hover  
+{
+    background-color:#d0c9af;
+}
+.dropdown img.flag  
+{
+    border:none; vertical-align:middle; margin-left:10px; 
+}

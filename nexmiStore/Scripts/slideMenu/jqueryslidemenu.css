@@ -1,0 +1,282 @@
+.jqueryslidemenu {
+    width: 100%;
+}
+
+.jqueryslidemenu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li {
+    float: left;
+    list-style-type: none;
+    margin: 0px 2px 0px 0px;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+}
+.jqueryslidemenu li a.TopMenuItem {
+    height: 28px;
+}
+.jqueryslidemenu li a {
+    background: url("images/menu_admin.gif") repeat-x scroll 0 -28px transparent;
+    color: #000000;
+    display: block;
+    font-weight: normal;
+    outline: medium none;
+    text-decoration: none;
+}
+.jqueryslidemenu li a:hover {
+   background-position: 0 -112px;
+}
+.jqueryslidemenu li a .CornerLeft {
+    background: url("images/menu_admin.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+.jqueryslidemenu li a:hover .CornerLeft {
+    background-position: 0 -84px;
+}
+.jqueryslidemenu li a .MenuText {
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+    color: #000000;
+    display: block;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight:bold;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 22px;
+    padding-right: 14px;
+}
+.jqueryslidemenu li a:hover .MenuText
+{
+	color:#FFFFFF;
+}
+.jqueryslidemenu li a .CornerRight {
+    background: url("images/menu_admin.gif") no-repeat scroll 0 -56px transparent;
+    display: block;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+}
+.jqueryslidemenu li a:hover .CornerRight {
+    background-position: 0 -140px;
+}
+
+.jqueryslidemenu li a .Arrow {
+    background: url("images/down.gif") no-repeat scroll 0 0 transparent;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    width: 20px;
+}
+.jqueryslidemenu li a:hover .Arrow 
+{
+	background: url("images/on_down.gif") no-repeat scroll 0 0 transparent;
+}
+
+.jqueryslidemenu .MenuImage {
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+
+.jqueryslidemenu .MenuImageHome {
+    background-image: url("/images/icons/home.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageProduct {
+    background-image: url("/images/icons/product.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageContent {
+    background-image: url("/images/icons/content1.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageCustomer {
+    background-image: url("/images/icons/group.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageMarketing {
+    background-image: url("/images/icons/globe_16.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageSkin {
+    background-image: url("/images/icons/template2.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.jqueryslidemenu .MenuImageConfig {
+    background-image: url("/images/icons/config.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    left: 12px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+
+/*Top level menu link items style*/
+
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: #464646;
+}
+
+.jqueryslidemenu ul li a:hover{
+/*background: #d8edfd; tab link background during hover state*/
+color: #005fb1;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+display: block;
+visibility: hidden;
+z-index:10;
+}
+
+.jqueryslidemenu ul li ul li a
+{
+	padding:5px 10px;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+background:#FFF;
+border-right: 1px solid #c5c5bd;
+border-left: 1px solid #c5c5bd;
+}
+
+.jqueryslidemenu ul li ul li.SubFirst{
+border-top: 1px solid #c5c5bd;
+}
+
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+width: 184px; /*width of sub menus*/
+background-image:none;
+margin: 0;
+border-top-width: 0;
+border-bottom: 1px solid #c5c5bd;
+font-weight:normal;
+}
+.jqueryslidemenu ul li ul li a span{ text-decoration:none;}
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+background: #05386D;
+color: #FFFFFF;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 7px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 18px;
+right: 5px;
+}
+#myslidemenu li li strong {
+	/*text-decoration:underline;*/
+}
+#myslidemenu ul li ul li .SubMenuText {
+/*margin-left:32px;*/
+}
+#myslidemenu li li span {
+padding:3px 0;
+}
+#myslidemenu li li strong, #myslidemenu li li span {
+    display:block;
+    line-height:1.2;
+}
+
+#myslidemenu li li span.SubMenuDescription {
+    font-size: 80%;
+}
+
+.jqueryslidemenu .selected a  {
+   background-position: 0 -112px;
+}
+.jqueryslidemenu .selected a .CornerLeft {
+   background-position: 0 -84px;
+}
+.jqueryslidemenu .selected a .MenuText {
+   color:#FFFFFF;
+}
+.jqueryslidemenu .selected a .CornerRight {
+   background-position: 0 -140px;
+}
+.jqueryslidemenu .selected a .Arrow 
+{
+	background: url("images/on_down.gif") no-repeat scroll 0 0 transparent;
+}

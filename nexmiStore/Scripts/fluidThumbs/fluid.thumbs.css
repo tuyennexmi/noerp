@@ -1,0 +1,40 @@
+/*
+
+	Fluid Thumbnail Bar
+	
+	Author	: Sam Dunn
+	Source	: Build Internet (www.buildinternet.com)
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+	/* Thumbnail Tray
+	----------------------------*/			
+#thumb-tray
+{ 
+    height:115px; position:absolute; left: 35%; right: 0px; z-index:3; overflow:hidden; text-align:center;
+}
+		
+ul#thumb-list
+{ 
+    display:inline-block; position:absolute; top: -16px; left:0; padding:0; list-style:none; margin-left: 18px; 
+}
+
+ul#thumb-list li 
+{
+    display:inline; width:140px; height:180px; float:left; overflow:hidden; margin:0; list-style:none;
+    background: #fff url('../../Content/UI_Images/bg1.jpg') repeat;
+}
+ul#thumb-list li:hover{ cursor:pointer; }	
+#thumb-prev, #thumb-next 
+{
+    width:30px; height:120px; position:absolute; z-index:5; bottom:0;
+}
+#thumb-prev{ left:0; background: url('img/thumb-back.png') no-repeat center center; background-color: #ddd; opacity: 0.4;}
+#thumb-next{ right:0; background:url('img/thumb-forward.png') no-repeat center center; background-color: #ddd; opacity: 0.4;}
+#thumb-prev:hover, #thumb-next:hover{ cursor:pointer; background-color: #ddd; opacity: 0.8; }
+#thumb-prev:hover{ border-right:1px solid #ccc; }
+#thumb-next:hover{ border-left:1px solid #ccc; }
+		
+		
+				

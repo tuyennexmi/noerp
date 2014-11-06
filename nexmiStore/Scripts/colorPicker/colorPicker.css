@@ -1,0 +1,44 @@
+﻿.colorPicker-container
+{
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.colorPicker-input
+{
+    width: 60px;
+    border: none;
+    padding: 2px; 
+    height: 18px;
+    margin: 0;   
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.colorPicker-input:focus
+{
+    border: none;
+}
+
+.colorPicker-button
+{
+    padding: 10px;
+    border: none;
+    background: none;    
+    background-image: url('colorPicker.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.colorPicker
+{
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+}

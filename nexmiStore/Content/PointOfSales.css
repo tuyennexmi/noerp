@@ -1,0 +1,309 @@
+﻿        .keyboardPOS
+        {
+            width: 60px; height: 50px; font-size: 18pt; color: #444;
+        }
+        .textPOS
+        {
+            font-size: 14px; font-weight: bold;    
+        }
+        .longPOS
+        {
+            width: 100px;    
+        }
+        .ordersPOS
+        {
+            margin: 10px;  
+            padding: 10px;
+            border: 1px solid #ddd;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-shadow:0px 0px 10px 0px #777777;
+            -webkit-box-shadow:0px 0px 10px 0px #777777;
+            box-shadow:0px 0px 10px 0px #777777;
+            background-color: #fff;
+        }
+        .summaryPOS
+        {
+            color: #444;
+            font-size: 18px;
+            font-family: Arial;
+        }
+        input[type=search] 
+        {
+            width: 250px;
+            height: 25px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+	        /* Will be ignored 
+	        padding: 30px;            /* Overridden by padding: 1px; 
+	        font-family: Georgia;     /* Overridden by font: -webkit-small-control; 
+	        border: 5px solid black;  /* Overridden by border: 2px inset; 
+	        background: red;          /* Overridden by background-color: white; 
+	        line-height: 3;           /* Irrelevant, I guess 
+	        */
+	
+	        /* Will break it! 
+	        text-indent: 20px;
+	        */ 
+	
+	
+	        /* Works fine 
+	        color: red;  
+	        letter-spacing: 4px;
+	        text-align: right;
+	        cursor: pointer;
+	        display: block; 
+	        width: 100%; 
+	        text-shadow: 0 0 2px black;        /* Probably shouldn't
+	        word-spacing: 20px;                /* Probably shouldn't
+	        */ 
+        }
+        .bg1
+        {
+            background-color: #2D2D2D;
+        }
+        .bg2
+        {
+            background-color: #ddd;
+        }
+        .bg3
+        {
+            height: 140px;
+            position: absolute; top: 39px; left: 35%; right: 0px;
+            overflow: scroll; overflow-y: hidden; -ms-overflow-y: hidden;
+        }
+        .bg4
+        {
+            background: #fff url('UI_Images/bg1.jpg') repeat;
+            position: absolute; top: 170px; left: 35%; bottom: 0px; right: 0px; overflow: scroll; overflow-x: hidden; -ms-overflow-x: hidden;
+        }
+        .divOrderPOS
+        {
+            /*position: absolute; top: 0px; left: 0px; bottom: 250px; right: 65%; overflow: scroll; text-align: center; overflow-x: hidden; -ms-overflow-x: hidden;*/
+        }
+        .itemsPOS
+        {
+            background-color: #fff;
+            width: 120px;
+            height: 90px;
+            margin: 2px;
+            padding: 2px;
+            border: 1px solid #ddd;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            -moz-box-shadow:0px 0px 10px 0px #777777;
+            -webkit-box-shadow:0px 0px 10px 0px #777777;
+            box-shadow:0px 0px 10px 0px #777777;
+            cursor: pointer;
+        }
+        
+        .ulListPOS
+        {
+            margin-top: 10px;
+	        cursor: default;
+	        list-style: none;
+	        padding: 0px 10px 10px 10px;
+        }
+
+        .ulListPOS li
+        {
+            position: relative;
+	        display: inline;
+	        float: left;
+	        margin: 5px;
+        }
+        
+        .ulListPOS li:hover
+        {
+            background-color: Red;
+        }
+        
+        .ulListPOS .selected
+        {
+            background-color: Red;
+        }
+        
+        .ulHorizontal
+        {
+            margin-top: 2px;
+            padding-left: 5px;
+	        cursor: default;
+	        list-style: none;
+        }
+
+        .ulHorizontal li
+        {
+            float: left;
+            margin: 5px;
+        }
+        
+        .ulHorizontal li:hover
+        {
+            background-color: Green;
+        }
+        
+        .ulHorizontal .selected
+        {
+            background-color: Green;
+        }
+        
+        .topleftPOS
+        {
+            font-size: 80%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            vertical-align: top;
+            color: White;
+            line-height: 10px;
+            background-color: Red;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0px 1px 0px #9A9CC5, 0px 3px 0px #7E86AC, 0px 3px 3px rgba(12, 14, 68, 0.67);    
+        }
+        
+        .toprightPOS
+        {
+            font-size: 80%;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            vertical-align: top;
+            color: white;
+            line-height: 10px;
+            background: #7f82ac;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0px 1px 0px #9A9CC5, 0px 3px 0px #7E86AC, 0px 3px 3px rgba(12, 14, 68, 0.67);    
+        }
+        
+        .ellipsisPOS 
+        {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');
+        }
+        
+        #orderlinesPOS
+        {
+            cursor: pointer;    
+        }
+        
+        #orderlinesPOS .itemSelected
+        {
+            background-color: #ccc;    
+        }
+        
+        .decimal
+        {
+            background-color: #444;
+            border-color: #444;
+        }
+        
+        .decimal:hover
+        {
+            background-color: #444;
+            border-color: #444;    
+        }
+        
+        #toPrint
+        {
+            width: 70%; 
+            background-color: #ccc; 
+            margin-top: 10px; 
+            border: 1px solid #ddd; 
+            -webkit-border-radius: 5px; 
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-shadow:0px 0px 10px 0px #777777;
+            -webkit-box-shadow:0px 0px 10px 0px #777777;
+            box-shadow:0px 0px 10px 0px #777777;
+            padding: 10px;
+        }
+        
+        /**********************/
+        .breadcrumbs-onePOS
+        {
+            padding: 0; 
+            margin: 0;
+            border-left: 1px solid #ccc;
+            box-shadow: 0 0 2px rgba(0,0,0,.2);
+            overflow: hidden;
+            list-style-type: none;
+        }
+
+        .breadcrumbs-onePOS li{
+          float: left;
+        }
+
+        .breadcrumbs-onePOS a
+        {
+            font-size: 90%;
+            line-height: 24px;
+          padding: 3px 5px 3px 25px;
+          float: left;
+          text-decoration: none;
+          color: #444;
+          position: relative;
+          text-shadow: 0 1px 0 rgba(255,255,255,.5);
+          background-color: #ddd;
+          background-image: linear-gradient(to right, #f5f5f5, #ddd);  
+        }
+
+        .breadcrumbs-onePOS a::after,
+        .breadcrumbs-onePOS a::before{
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -1.5em;   
+          border-top: 1.5em solid transparent;
+          border-bottom: 1.5em solid transparent;
+          border-left: 1em solid;
+          right: -1em;
+        }
+
+        .breadcrumbs-onePOS a::after{ 
+          z-index: 2;
+          border-left-color: #ddd;  
+        }
+
+        .breadcrumbs-onePOS a::before{
+          border-left-color: #ccc;  
+          right: -1.1em;
+          z-index: 1; 
+        }
+
+        .breadcrumbs-onePOS li:first-child a{
+            padding-left: 1em;
+        }
+
+        .breadcrumbs-onePOS a:hover{
+            background: #ddd;
+            text-decoration: underline;
+        }
+
+        .breadcrumbs-onePOS a:hover::after{
+          border-left-color: #ddd;
+        }
+
+        .breadcrumbs-onePOS .currentStatus a,
+        .breadcrumbs-onePOS .currentStatus a:hover{
+          font-weight: bold;
+          background: #ddd;
+        }
+
+        .breadcrumbs-onePOS .currentStatus a::after,
+        .breadcrumbs-onePOS .currentStatus a:hover::after{
+          border-left-color: #ddd;
+        }
+
+        .breadcrumbs-onePOS .currentStatus::after,
+        .breadcrumbs-onePOS .currentStatus::before{
+          content: normal;  
+        }

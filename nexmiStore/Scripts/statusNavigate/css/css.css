@@ -1,0 +1,67 @@
+/*********
+* CSS Nav/Tabs for Techmug
+* By Shahzaib Ali
+* www.facebook.com/smsinns
+*********/
+
+/*********
+* Navs / Tabs 
+*********/
+.divStatus 
+{
+    background:url(../images/nav-bg.png) top left repeat-x;
+    border: 1px solid #aaaaaa;
+    border-top: none;
+    overflow: hidden;
+}
+
+.btn
+{
+    margin-left: 5px;    
+}
+
+.nav 
+{
+    margin:0 auto;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #FFFFFF;
+    float: right;
+}
+.nav ul 
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav li 
+{
+    float: left;
+    padding: 0 0 0 20px;
+    margin: 0 0 0 -20px;
+    cursor: pointer;
+}
+.nav li a 
+{
+    display: block; 
+    padding: 5px 10px 5px 0;
+    color: #5e5e5e;
+    background: url(../images/header-nav-bg.png) top right no-repeat;
+    text-decoration: none;
+}
+.nav li:hover a 
+{
+    color: #FFF
+}
+.nav li:hover 
+{
+    
+}
+.nav li.current a 
+{
+    
+    color:#FFF
+}
+.nav li.current 
+{
+    
+}

@@ -1,0 +1,325 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="x-ua-compatible" content="IE=10" />
+    <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="<%=Url.Content("~")%>Content/Layout.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Content/buttons.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Content/breadcrumb.css" rel="stylesheet" type="text/css" />
+    <%--<link href="<%=Url.Content("~")%>Scripts/UI-CSS/overcast/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />--%>
+    <link href="<%=Url.Content("~")%>Scripts/metroJs/MetroJs.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Scripts/googleMenu/google_menu.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Content/Print.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Content/Print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="<%=Url.Content("~")%>Scripts/jquery-ui/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <%--<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>--%>
+    <script src="<%=Url.Content("~")%>Scripts/jquery-ui/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+    <link href="../../Scripts/jquery-ui/css/smoothness/jquery-ui-1.10.1.custom.min.css"        rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/googleMenu/jquery.google_menu.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Common.js" type="text/javascript"></script>
+    <%--<script src="<%=Url.Content("~")%>Scripts/forApp/NMValidator.js" type="text/javascript"></script>--%>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/SiteMaster.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/ajaxLoading.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Scripts/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/base64/jquery.base64.min.js" type="text/javascipt"></script>
+    <script src="<%=Url.Content("~")%>Scripts/base64/webtoolkit.base64.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jquery.printElement.min.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Scripts/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxcore.js" type="text/javascript"></script>
+    <%--<script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxknockout.js" type="text/javascript"></script>--%>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxdata.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxbuttons.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxwindow.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxcombobox.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxdropdownlist.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.aggregates.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.columnsreorder.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.columnsresize.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.edit.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.export.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.filter.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxcheckbox.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxmenu.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.grouping.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.pager.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.selection.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.sort.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxgrid.storage.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxinput.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxlistbox.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxtabs.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxvalidator.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/jqxscrollbar.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jqwidgets/globalization/jquery.global.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Scripts/nailThump/jquery.nailthumb.1.1.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/nailThump/jquery.nailthumb.1.1.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Content/toggle-switch.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Scripts/TagIt/jquery.tagit.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~")%>Scripts/TagIt/tagit.ui-zendesk.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/TagIt/tag-it.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/jquery.ba-hashchange.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/numberFormat/number-functions.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Scripts/searchSlider/slider.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/numberFormat/autoNumeric.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/numberFormat/jquery.numeric.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/download/jquery-download.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jquery-te/jquery-te-1.3.3.min.js" type="text/javascript"></script>
+    <link href="<%=Url.Content("~")%>Scripts/jquery-te/jquery-te-1.3.3.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/ckfinder/ckfinder.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/graph/canvasXpress.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/graph/flashcanvas.js" type="text/javascript"></script>  
+    <link href="<%=Url.Content("~")%>Scripts/colorPicker/colorPicker.css" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~")%>Scripts/colorPicker/colorPicker.js" type="text/javascript"></script>  
+    <script src="<%=Url.Content("~")%>Scripts/jqPagination/jquery.jqpagination.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jquery.form.min.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/jquery.maskedinput.min.js" type="text/javascript"></script>
+    
+    <%--///////////--%>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Products.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Projects.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Tasks.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Stage.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Issue.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Imports.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Exports.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Customers.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Payments.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/Receipts.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/SalesInvoices.js" type="text/javascript"></script>
+    <script src="<%=Url.Content("~")%>Scripts/forApp/SalesOrders.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var appPath = '<%=Url.Content("~")%>';
+        var loadingContent = '<div align="center"><img alt="" src="<%= Url.Content("~")%>Content/UI_Images/processing.gif" /><br /><b>Đang tải dữ liệu...</b></div>';
+        var processing = '<div class="noticeArea"><table style="cellpadding=\"0\" cellspacing=\"0\""><tr><td><img alt="" src="<%=Url.Content("~")%>Content/UI_Images/processing.gif" style="width: 16px" /></td><td><b style="color: Red; font-size: 12px;">Đang xử lý...<b/></td></tr></table></div>';
+        var notValid = '<div class="noticeArea"><table style="cellpadding=\"0\" cellspacing=\"0\""><tr><td><img alt="" src="<%=Url.Content("~")%>Content/UI_Images/24Delete-icon.png" style="width: 16px" /></td><td><b style="color: Red; font-size: 12px;">Dữ liệu nhập không đúng!<br/>Kiểm tra các ô bị đánh dấu!<b/></td></tr></table></div>';
+        var success = '<table style="cellpadding=\"0\" cellspacing=\"0\""><tr><td><img alt="" src="<%=Url.Content("~")%>Content/UI_Images/16Ok-apply-icon.png" /></td><td><b style="color: Green">Đã lưu!<b/></td></tr></table>';
+        var owner = "";
+        var theme = "classic";
+        var language = {};
+        language = {
+            // separator of parts of a date (e.g. '/' in 11/05/1955)
+            '/': "/",
+            // separator of parts of a time (e.g. ':' in 05:44 PM)
+            ':': ":",
+            // the first day of the week (0 = Sunday, 1 = Monday, etc)
+            firstDay: 0,
+            days: {
+                // full day names
+                names: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+                // abbreviated day names
+                namesAbbr: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+                // shortest day names
+                namesShort: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
+            },
+            months: {
+                // full month names (13 months for lunar calendards -- 13th month should be "" if not lunar)
+                names: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12", ""],
+                // abbreviated month names
+                namesAbbr: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", ""]
+            },
+            // AM and PM designators in one of these forms:
+            // The usual view, and the upper and lower case versions
+            //      [standard,lowercase,uppercase]
+            // The culture does not use AM or PM (likely all standard date formats use 24 hour time)
+            //      null
+            AM: ["SÁNG", "sáng", "SÁNG"],
+            PM: ["CHIỀU", "chiều", "CHIỀU"],
+            eras: [
+            // eras in reverse chronological order.
+            // name: the name of the era in this culture (e.g. A.D., C.E.)
+            // start: when the era starts in ticks (gregorian, gmt), null if it is the earliest supported era.
+            // offset: offset in years from gregorian calendar
+                {"name": "A.D.", "start": null, "offset": 0 }
+            ],
+            twoDigitYearMax: 2029,
+            patterns: {
+                // short date pattern
+                d: "d/M/yyyy",
+                // long date pattern
+                D: "dddd, MMMM dd, yyyy",
+                // short time pattern
+                t: "h:mm tt",
+                // long time pattern
+                T: "h:mm:ss tt",
+                // long date, short time pattern
+                f: "dddd, MMMM dd, yyyy h:mm tt",
+                // long date, long time pattern
+                F: "dddd, MMMM dd, yyyy h:mm:ss tt",
+                // month/day pattern
+                M: "MMMM dd",
+                // month/year pattern
+                Y: "yyyy MMMM",
+                // S is a sortable format that does not vary by culture
+                S: "yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss"
+            },
+            percentsymbol: "%",
+            currencysymbol: "VNĐ",
+            currencysymbolposition: "after",
+            decimalseparator: '.',
+            thousandsseparator: ',',
+            pagergotopagestring: "Trang:",
+            pagershowrowsstring: "hiển thị",
+            pagerrangestring: " của ",
+            pagerpreviousbuttonstring: "Trước",
+            pagernextbuttonstring: "Sau",
+            groupsheaderstring: "Kéo, thả cột vào đây để tạo nhóm",
+            sortascendingstring: "Tăng dần",
+            sortdescendingstring: "Giảm dần",
+            sortremovestring: "Bỏ sắp xếp",
+            groupbystring: "Tạo nhóm",
+            groupremovestring: "Loại bỏ",
+            filterclearstring: "Xóa",
+            filterstring: "Lọc",
+            filtershowrowstring: "Hiển thị cột tại:",
+            filterorconditionstring: "Hoặc",
+            filterandconditionstring: "Và",
+            filterselectallstring: "(Chọn tất cả)",
+            filterchoosestring: "Chọn giá trị:",
+            filterstringcomparisonoperators: ['rỗng', 'khác rỗng', 'chứa', 'contains(match case)',
+        'does not contain', 'does not contain(match case)', 'starts with', 'starts with(match case)',
+        'ends with', 'ends with(match case)', 'equal', 'equal(match case)', 'null', 'not null'],
+            filternumericcomparisonoperators: ['equal', 'not equal', 'less than', 'less than or equal', 'greater than', 'greater than or equal', 'null', 'not null'],
+            filterdatecomparisonoperators: ['equal', 'not equal', 'less than', 'less than or equal', 'greater than', 'greater than or equal', 'null', 'not null'],
+            filterbooleancomparisonoperators: ['equal', 'not equal'],
+            validationstring: "Entered value is not valid",
+            emptydatastring: "Không có dữ liệu"
+        };
+
+        $(document).ready(function () {
+            $(window).hashchange(function () {
+                try {
+                    $('#divPOS').remove();
+                    $(document).unbind('keydown');
+                } catch (err) { }
+                var moduleId = fnGetHashParameter('moduleId');
+                var functionId = fnGetHashParameter('functionId');
+                var action = fnGetHashParameter('action');
+                if (moduleId != '')
+                    fnLoadSubMenu(moduleId, functionId);
+                if (action != "")
+                    fnLoad(action);
+                $('.menu').find('.active').removeClass('active');
+                $('#' + moduleId).addClass('active');
+            });
+            $(window).hashchange();
+            $("body").css("display", "none");
+            $("body").fadeIn(1200);
+            CKFinder.setupCKEditor(CKEDITOR, appPath + 'Scripts/ckfinder/');
+            fnShowHideList();
+            //InitializeTimer();
+        });
+
+        function fnChangeHash(moduleId, functionId, action) {
+            if (moduleId == null)
+                moduleId = fnGetHashParameter('moduleId');
+            if (functionId == null)
+                functionId = fnGetHashParameter('functionId');
+            location.hash = 'moduleId=' + moduleId + '&functionId=' + functionId + '&action=' + action;
+        }
+
+        function fnLoadSubMenu(moduleId, functionId) {
+            $('.subMenu').find('.subCurrent').removeClass('subCurrent');
+            $('#' + functionId).addClass('subCurrent');
+            if (functionId == '' || $('#' + functionId).length == 0) {
+                //LoadContentDynamic('divSubMenu', 'UserControl/SubMenu', { moduleId: moduleId });
+                $('#divSubMenu').fadeOut('slow', function () {
+                    $('#divSubMenu').load(appPath + 'UserControl/SubMenu', { moduleId: moduleId }, function (response, status, XMLHttpRequest) {
+                        if (status == 'error') {
+                            alert('Không thể tải dữ liệu.\nVui lòng thử lại hoặc liên hệ người quản trị để khắc phục.\nChi tiết lỗi: ' + XMLHttpRequest.status + " " + XMLHttpRequest.statusText);
+                        } else { }
+                        $('#divSubMenu').fadeIn('fast');
+                    });
+                });
+            }
+        }
+
+        function fnLogOut() {
+            if (confirm('Bạn muốn thoát khỏi chương trình?'))
+                document.location = appPath + 'Account/LogOff?returnUrl=' + Base64.encode(location.hash);
+        }
+
+        var secs;
+        var timerID = null;
+        var timerRunning = false;
+        var delay = 1000;
+
+        function InitializeTimer() {
+            secs = 60;
+            StopTheClock();
+            StartTheTimer();
+        }
+
+        function StopTheClock() {
+            if (timerRunning)
+                clearTimeout(timerID);
+            timerRunning = false;
+        }
+
+        function StartTheTimer() {
+            if (secs == 0) {
+                StopTheClock();
+                //$.post(appPath + "Account/RequestAfterTimerTick", {}, function (data) { });
+                InitializeTimer();
+            }
+            else {
+                self.status = secs;
+                secs = secs - 1;
+                timerRunning = true;
+                timerID = self.setTimeout("StartTheTimer()", delay);
+            }
+        }
+
+        function fnLoadImportFromExcel(mode) {
+            LoadContent('', 'UserControl/ImportFromExcelForm?mode=' + mode);
+        }
+
+    </script>
+</head>
+
+<body>  
+<%  if(Session["UserInfo"] != null)
+    {
+%>
+    <div id="container" style="width:100%">
+        <div id="AjaxLoading">Đang tải...</div>
+        <div id="TopPanel">
+            <%Html.RenderAction("MainMenu", "UserControl");%>
+        </div>
+        <div id="LeftPanel">
+            <div style="text-align: center;">
+                <a target="_blank" href='http://www.nexmi.com'> <img alt="" src="<%=Url.Content("~")%>Content/avatars/<%=NEXMI.NMCommon.GetCompany().Customer.Avatar %>" style="max-width:220px; max-height:112px"/></a>
+            </div>
+            <div style='padding:6px'><strong>Danh sách chức năng:</strong></div>
+            <div id="divSubMenu"></div>
+            
+            <div id="powered"> Powered by <a href="http://www.nexmi.com" target="_blank" style="text-decoration: none; color: Orange"> NEXMI Solutions</a></div>
+        </div>
+        <div id="RightPanel">
+            <div id="mainContent">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>     
+        </div>
+    </div>
+    <div id='divFeed' class="nmChatSidebar">
+        <%Html.RenderAction("Feeds", "Messages"); %>
+    </div>
+    <%Html.RenderAction("ChatUserList", "Chat"); %>
+<%
+    }
+    else
+    {
+        Response.Redirect(Url.Content("~/Account/Logon"));
+    }
+%>
+</body>
+</html>
