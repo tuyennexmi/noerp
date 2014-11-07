@@ -1,0 +1,40 @@
+	    NMPermissionsBL PermissionBL = new NMPermissionsBL();
+            NMPermissionsWSI PermissionWSI = new NMPermissionsWSI();
+
+            NMModulesBL ModuleBL = new NMModulesBL();
+            NMModulesWSI ModuleWSI = new NMModulesWSI();
+            ModuleWSI.Mode = "SRC_OBJ";
+            List<NMModulesWSI> ModuleWSIs = ModuleBL.callListBL(ModuleWSI);
+
+            foreach (NMModulesWSI ModulesWSI in ModuleWSIs)
+            {
+                // Get all function of module
+                NMFunctionsBL FunctionBL = new NMFunctionsBL();
+                NMFunctionsWSI FunctionWSI = new NMFunctionsWSI();
+                FunctionWSI.Mode = "SRC_OBJ";
+                FunctionWSI.ModuleId = ModulesWSI.Module.Id;
+                FunctionWSI.Active = true.ToString();
+                List<NMFunctionsWSI> AllFunctionsWSIs = FunctionBL.callListBL(FunctionWSI);
+                
+                foreach (NMFunctionsWSI function in AllFunctionsWSIs)
+                {
+                        PermissionWSI.Mode = "SAV_OBJ";
+                        PermissionWSI.UserGroupId = groupID;
+                        PermissionWSI.UserId = null;
+                        PermissionWSI.FunctionId = function.Id;
+                        PermissionWSI.PSelect = "N";
+                        PermissionWSI.PInsert = "N";
+                        PermissionWSI.PUpdate = "N";
+                        PermissionWSI.PDelete = "N";
+                        PermissionWSI.ViewPrice = "N";
+                        PermissionWSI.PPrint = "N";
+                        PermissionWSI.Export = "N";
+                        PermissionWSI.Duplicate = "N";
+                        PermissionWSI.Approval = "N";
+                        PermissionWSI.ViewAll = "N";
+                        PermissionWSI.Calculate = "N";
+                        PermissionWSI.History = "N";
+                        PermissionWSI.CreatedBy = LoginUserID;
+                        PermissionWSI = PermissionBL.callSingleBL(PermissionWSI);
+                }
+            }
