@@ -3,7 +3,7 @@ noerp
 
 Nexmi open erp
 
-This is web-base app to manage bussiness process. Writed on ASP.NET MVC, HTML, CSS, jQuery and MSSQL 2008 (default).
+This is web-base app to manage bussiness process adn data. Writed on ASP.NET MVC, HTML, CSS, jQuery and MSSQL 2008 (default).
 It can help to manage your data by below module:
 1. sales module: customer, quotation, sale order, sale invoice, account receivable, sale report...
 2. purchase module: supplier, request for quotation, purchase order, purchase invoice, account payable, purchase report...
