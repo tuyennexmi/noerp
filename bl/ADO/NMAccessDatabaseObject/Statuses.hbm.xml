@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Statuses" table="Statuses">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+	  <property name="English">
+		  <column name="English" />
+	  </property>
+	  <property name="Korea">
+		  <column name="Korea" />
+	  </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="ObjectName">
+      <column name="ObjectName" />
+    </property>
+    <property name="OrdinalNumber">
+      <column name="OrdinalNumber" />
+    </property>
+  </class>
+</hibernate-mapping>

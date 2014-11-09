@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="DailyReports" table="DailyReports">
+	  <id name="Id">
+		  <column name="Id" sql-type="String" not-null="true" />
+		  <generator class="assigned" />
+	  </id>
+	  <property name="Title">
+		  <column name="Title" />
+	  </property>
+	  <property name="Contents">
+		  <column name="Contents" />
+	  </property>
+    <property name="Advantages">
+      <column name="Advantages" />
+    </property>
+    <property name="Hards">
+      <column name="Hards" />
+    </property>	  
+	  <property name="Promotes">
+		  <column name="Promotes" />
+	  </property>
+	  <property name="TaskId">
+		  <column name="TaskId" />
+	  </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+  </class>
+</hibernate-mapping>

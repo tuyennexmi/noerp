@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Customers" table="Customers">
+    <id name="CustomerId">
+      <column name="CustomerId" sql-type="String" not-null="true" />
+      <generator class="assigned" />
+    </id>
+    <property name="CompanyNameInVietnamese">
+      <column name="CompanyNameInVietnamese" />
+    </property>
+    <property name="CompanyNameInSecondLanguage">
+      <column name="CompanyNameInSecondLanguage" />
+    </property>
+    <property name="Address">
+      <column name="Address" />
+    </property>
+    <property name="AreaId">
+      <column name="AreaId" />
+    </property>
+    <property name="Telephone">
+      <column name="Telephone" />
+    </property>
+    <property name="Website">
+      <column name="Website" />
+    </property>
+    <property name="FaxNumber">
+      <column name="FaxNumber" />
+    </property>
+    <property name="GroupId">
+      <column name="GroupId" />
+    </property>
+    <property name="TaxCode">
+      <column name="TaxCode" />
+    </property>
+    <property name="MainBusiness">
+      <column name="MainBusiness" />
+    </property>
+    <property name="DateOfBirth">
+      <column name="DateOfBirth" />
+    </property>
+    <property name="Avatar">
+      <column name="Avatar" />
+    </property>
+    <property name="ManagedBy">
+      <column name="ManagedBy" />
+    </property>
+    <property name="Gender">
+      <column name="Gender" />
+    </property>
+    <property name="CustomerTypeId">
+      <column name="CustomerTypeId" />
+    </property>
+    <property name="EmailAddress">
+      <column name="EmailAddress" />
+    </property>
+    <property name="EmailPassword">
+      <column name="EmailPassword" />
+    </property>
+    <property name="DueDate">
+      <column name="DueDate" />
+    </property>
+    <property name="MaxDebitAmount">
+      <column name="MaxDebitAmount" />
+    </property>
+    <property name="Discontinued">
+      <column name="Discontinued" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="KindOfIndustryId">
+      <column name="KindOfIndustryId" />
+    </property>
+    <property name="KindOfEnterpriseId">
+      <column name="KindOfEnterpriseId" />
+    </property>
+    <property name="Cellphone">
+      <column name="Cellphone" />
+    </property>
+    <property name="ParentId">
+      <column name="ParentId" />
+    </property>
+    <property name="JobPosition">
+      <column name="JobPosition" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+    <property name="Code">
+      <column name="Code" />
+    </property>
+    <property name="Password">
+      <column name="Password" />
+    </property>
+    <property name="IdentifyId">
+      <column name="IdentifyId" />
+    </property>
+    <property name="IsContact">
+      <column name="IsContact" />
+    </property>
+    <property name="DeparmentId">
+      <column name="DeparmentId" />
+    </property>
+	  <property name="IsInherit">
+		  <column name="IsInherit" />
+	  </property>
+    <property name="MainUrl">
+      <column name="MainUrl" />
+    </property>
+    <property name="StockId">
+      <column name="StockId" />
+    </property>
+    <property name="ShiftId">
+      <column name="ShiftId" />
+    </property>
+    <property name="MinSales">
+      <column name="MinSales" />
+    </property>
+    <property name="Latitude">
+      <column name="Latitude" />
+    </property>
+    <property name="Longitude">
+      <column name="Longitude" />
+    </property>
+    <property name="BonusPoints">
+      <column name="BonusPoints" />
+    </property>
+  </class>
+</hibernate-mapping>

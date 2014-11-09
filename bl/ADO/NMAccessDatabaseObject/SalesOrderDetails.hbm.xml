@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="SalesOrderDetails" table="SalesOrderDetails">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="OrderId">
+      <column name="OrderId" />
+    </property>
+    <property name="ProductId">
+      <column name="ProductId" />
+    </property>
+	  <property name="UnitId">
+		  <column name="UnitId" />
+	  </property>
+    <property name="Quantity">
+      <column name="Quantity" />
+    </property>
+    <property name="Price">
+      <column name="Price" />
+    </property>
+	  <property name="Amount">
+		  <column name="Amount" />
+	  </property>
+	  
+    <property name="Discount">
+      <column name="Discount" />
+    </property>
+	  <property name="DiscountAmount">
+		  <column name="DiscountAmount" />
+	  </property>
+	  <property name="Tax">
+		  <column name="Tax" />
+	  </property>
+	  <property name="TaxAmount">
+		  <column name="TaxAmount" />
+	  </property>
+	  
+    <property name="TotalAmount">
+      <column name="TotalAmount" />
+    </property>
+	  
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    
+	  <property name="CreatedDate">
+		  <column name="CreatedDate" />
+	  </property>
+	  <property name="CreatedBy">
+		  <column name="CreatedBy" />
+	  </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+  </class>
+</hibernate-mapping>

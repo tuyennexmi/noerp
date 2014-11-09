@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Leads" table="Leads">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="Subject">
+      <column name="Subject" />
+    </property>
+    <property name="CustomerId">
+      <column name="CustomerId" />
+    </property>
+    <property name="ContactId">
+      <column name="ContactId" />
+    </property>
+    <property name="SalesPersonId">
+      <column name="SalesPersonId" />
+    </property>
+    <property name="DepartmentId">
+      <column name="DepartmentId" />
+    </property>
+    <property name="Priority">
+      <column name="Priority" />
+    </property>
+    <property name="CategoryId">
+      <column name="CategoryId" />
+    </property>
+    <property name="InternalNotes">
+      <column name="InternalNotes" />
+    </property>
+    <property name="OptOut">
+      <column name="OptOut" />
+    </property>
+    <property name="Active">
+      <column name="Active" />
+    </property>
+    <property name="ReferredBy">
+      <column name="ReferredBy" />
+    </property>
+    <property name="StageId">
+      <column name="StageId" />
+    </property>
+    <property name="Revenue">
+      <column name="Revenue" />
+    </property>
+    <property name="PercentOfRevenue">
+      <column name="PercentOfRevenue" />
+    </property>
+    <property name="NextAction">
+      <column name="NextAction" />
+    </property>
+    <property name="NextActionDescription">
+      <column name="NextActionDescription" />
+    </property>
+    <property name="ExpectedClosing">
+      <column name="ExpectedClosing" />
+    </property>
+    <property name="ParentId">
+      <column name="ParentId" />
+    </property>
+    <property name="TypeId">
+      <column name="TypeId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

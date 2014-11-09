@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Modules" table="Modules">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+	  <property name="NameInEnglish">
+		  <column name="NameInEnglish" />
+	  </property>
+	  <property name="NameInKorea">
+		  <column name="NameInKorea" />
+	  </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="Action">
+      <column name="Action" />
+    </property>
+    <property name="DefaultFunctionId">
+      <column name="DefaultFunctionId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <property name="Active">
+      <column name="Active" />
+    </property>
+    <property name="Ordinal">
+      <column name="Ordinal" />
+    </property>
+    <set name="FunctionsList" lazy="true" cascade="delete">
+      <key column="ModuleId" />
+      <one-to-many class="Functions" />
+    </set>
+  </class>
+</hibernate-mapping>

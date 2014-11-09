@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Stages" table="Stages">
+    <id name="StageId">
+      <column name="StageId" sql-type="String" not-null="true" length="30" />
+      <generator class="assigned" />
+    </id>
+    <property name="StageName">
+      <column name="StageName" />
+    </property>
+    <property name="RelatedStatus">
+      <column name="RelatedStatus" />
+    </property>
+    <property name="Sequence">
+      <column name="Sequence" />
+    </property>
+    <property name="IsCommon">
+      <column name="IsCommon" />
+    </property>
+    <property name="IsHide">
+      <column name="IsHide" />
+    </property>
+    <property name="Folded">
+      <column name="Folded" />
+    </property>
+    <property name="TypeId">
+      <column name="TypeId" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <property name="Probability">
+      <column name="Probability" />
+    </property>
+    <property name="Change">
+      <column name="Change" />
+    </property>
+    <property name="DefaultNewSale">
+      <column name="DefaultNewSale" />
+    </property>
+    <!--<set name="Tasks" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="StageId" />
+      <one-to-many class="Tasks" />
+    </set>
+    <set name="Issues" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="StageId" />
+      <one-to-many class="Issues" />
+    </set>-->
+  </class>
+</hibernate-mapping>

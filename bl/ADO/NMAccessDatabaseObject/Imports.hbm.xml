@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Imports" table="Imports">
+    <id name="ImportId">
+      <column name="ImportId" sql-type="varchar" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ImportBatchId">
+      <column name="ImportBatchId" />
+    </property>
+    <property name="ImportDate">
+      <column name="ImportDate" />
+    </property>
+    <property name="ImportTypeId">
+      <column name="ImportTypeId" />
+    </property>
+    <property name="InvoiceId">
+      <column name="InvoiceId" />
+    </property>
+    <property name="SupplierId">
+      <column name="SupplierId" />
+    </property>
+    <property name="CarrierId">
+      <column name="CarrierId" />
+    </property>
+    <property name="StockId">
+      <column name="StockId" />
+    </property>
+    <property name="ExportStockId">
+      <column name="ExportStockId" />
+    </property>
+    <property name="DescriptionInVietnamese">
+      <column name="DescriptionInVietnamese" />
+    </property>
+    <property name="ImportStatus">
+      <column name="ImportStatus" />
+    </property>
+    <property name="Reference">
+      <column name="Reference" />
+    </property>
+    <property name="Transport">
+      <column name="Transport" />
+    </property>
+    <property name="DeliveryMethod">
+      <column name="DeliveryMethod" />
+    </property>
+    <property name="BackOrderOf">
+      <column name="BackOrderOf" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="Amount">
+		  <column name="Amount" />
+	  </property>
+	  
+	  <property name="SupplierReference">
+		  <column name="SupplierReference" />
+	  </property>
+	  <property name="InvoiceTypeId">
+		  <column name="InvoiceTypeId" />
+	  </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+
+	  <set name="ImportDetailsList" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="ImportId" />
+      <one-to-many class="ImportDetails" />
+    </set>
+  </class>
+</hibernate-mapping>

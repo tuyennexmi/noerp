@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Calendars" table="Calendars">
+	  <id name="Id">
+		  <column name="Id" sql-type="int" not-null="true" />
+		  <generator class="identity" />
+	  </id>
+    
+	  <property name="TypeId">
+		  <column name="TypeId" />
+	  </property>
+    <property name="StartDate">
+      <column name="StartDate" />
+    </property>
+    <property name="EndDate">
+      <column name="EndDate" />
+    </property>
+	  <property name="Title">
+		  <column name="Title" />
+	  </property>
+	  <property name="Contents">
+		  <column name="Contents" />
+	  </property>
+	  <property name="IsPublish">
+		  <column name="IsPublish" />
+	  </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

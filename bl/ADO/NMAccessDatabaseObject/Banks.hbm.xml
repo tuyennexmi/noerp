@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Banks" table="Banks">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="Code">
+      <column name="Code" />
+    </property>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+    <property name="Address">
+      <column name="Address" />
+    </property>
+    <property name="AreaId">
+      <column name="AreaId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

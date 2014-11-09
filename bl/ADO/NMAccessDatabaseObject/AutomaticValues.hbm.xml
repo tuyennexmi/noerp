@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="AutomaticValues" table="AutomaticValues">
+    <id name="ObjectName">
+      <column name="ObjectName" not-null="true" />
+      <generator class="assigned" />
+    </id>
+    <property name="PrefixOfDefaultValueForId">
+      <column name="PrefixOfDefaultValueForId" />
+    </property>
+    <property name="LengthOfDefaultValueForId">
+      <column name="LengthOfDefaultValueForId" />
+    </property>
+    <property name="LastValueOfColumnId">
+      <column name="LastValueOfColumnId" />
+    </property>
+    <property name="DefaultValueForSelection">
+      <column name="DefaultValueForSelection" />
+    </property>
+    
+    <property name="FullYear">
+      <column name="FullYear" />
+    </property>
+    <property name="Sign">
+      <column name="Sign" />
+    </property>
+    <property name="ResetChar">
+      <column name="ResetChar" />
+    </property>
+    <property name="ResetDate">
+      <column name="ResetDate" />
+    </property>
+    <property name="DateFormat">
+      <column name="DateFormat" />
+    </property>
+    <property name="Invert">
+      <column name="Invert" />
+    </property>
+  </class>
+</hibernate-mapping>

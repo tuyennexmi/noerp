@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="RequirementDetails" table="RequirementDetails">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="RequirementId">
+      <column name="RequirementId" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="ProductId">
+      <column name="ProductId" />
+    </property>
+    <property name="Quantity">
+      <column name="Quantity" />
+    </property>
+	  <property name="Price">
+		  <column name="Price" />
+	  </property>
+    <property name="Amount">
+      <column name="Amount" />
+    </property>
+  </class>
+</hibernate-mapping>

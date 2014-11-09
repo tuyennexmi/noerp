@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Receipts" table="Receipts">
+    <id name="ReceiptId">
+      <column name="ReceiptId" sql-type="varchar" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ReceiptBatchId">
+      <column name="ReceiptBatchId" />
+    </property>
+    <property name="ReceiptDate">
+      <column name="ReceiptDate" />
+    </property>
+    <property name="ReceiptTypeId">
+      <column name="ReceiptTypeId" />
+    </property>
+    <property name="CustomerId">
+      <column name="CustomerId" />
+    </property>
+    <property name="InvoiceId">
+      <column name="InvoiceId" />
+    </property>
+	  <property name="Reference">
+		  <column name="Reference" />
+	  </property>
+	  <property name="StockId">
+		  <column name="StockId" />
+	  </property>
+    <property name="PaymentMethodId">
+      <column name="PaymentMethodId" />
+    </property>
+    <property name="CurrencyId">
+      <column name="CurrencyId" />
+    </property>
+    <property name="Amount">
+      <column name="Amount" />
+    </property>
+    <property name="ExchangeRate">
+      <column name="ExchangeRate" />
+    </property>
+    <property name="ReceiptAmount">
+      <column name="ReceiptAmount" />
+    </property>
+    <property name="DescriptionInVietnamese">
+      <column name="DescriptionInVietnamese" />
+    </property>
+    <property name="ReceiptStatus">
+      <column name="ReceiptStatus" />
+    </property>
+	  <property name="ReceivedBankAccount">
+		  <column name="ReceivedBankAccount" />
+	  </property>
+	  <property name="ApprovedBy">
+		  <column name="ApprovedBy" />
+	  </property>
+	  <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+  </class>
+</hibernate-mapping>

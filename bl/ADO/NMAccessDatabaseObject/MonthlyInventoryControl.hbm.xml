@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="MonthlyInventoryControl" table="MonthlyInventoryControl">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="ProductId">
+      <column name="ProductId" />
+    </property>
+    <property name="StockId">
+      <column name="StockId" />
+    </property>
+    <property name="BeginQuantity">
+      <column name="BeginQuantity" />
+    </property>
+    <property name="ImportQuantity">
+      <column name="ImportQuantity" />
+    </property>
+    <property name="ExportQuantity">
+      <column name="ExportQuantity" />
+    </property>
+    <property name="EndQuantity">
+      <column name="EndQuantity" />
+    </property>
+    <property name="SalesQuantity">
+      <column name="SalesQuantity" />
+    </property>
+    <property name="OutQuantity">
+      <column name="OutQuantity" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

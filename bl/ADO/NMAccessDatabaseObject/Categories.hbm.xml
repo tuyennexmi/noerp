@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Categories" table="Categories">
+    <id name="Id">
+      <column name="Id" sql-type="varchar" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+	  <property name="CustomerCode">
+		  <column name="CustomerCode" />
+	  </property>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="ObjectName">
+      <column name="ObjectName" />
+    </property>
+    <property name="Image">
+      <column name="Image" />
+    </property>
+    <property name="DueDate">
+      <column name="DueDate" />
+    </property>
+    <property name="Discontinued">
+      <column name="Discontinued" />
+    </property>
+    <property name="ParentId">
+      <column name="ParentId" />
+    </property>
+    <property name="Ordinal">
+      <column name="Ordinal" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <!--<set name="CategoryDetailsList" lazy="true" cascade="delete">
+      <key column="CategoryId" />
+      <one-to-many class="CategoryDetails" />
+    </set>
+    <set name="ProductsList" lazy="true" cascade="delete">
+      <key column="CategoryId" />
+      <one-to-many class="Products" />
+    </set>-->
+  </class>
+</hibernate-mapping>

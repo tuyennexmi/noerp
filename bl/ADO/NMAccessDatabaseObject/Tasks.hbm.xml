@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Tasks" table="Tasks">
+    <id name="TaskId">
+      <column name="TaskId" sql-type="String" not-null="true" length="30" />
+      <generator class="assigned" />
+    </id>
+    <property name="TaskName">
+      <column name="TaskName" />
+    </property>
+	  <property name="JobReference">
+		  <column name="JobReference" />
+	  </property>
+    <property name="ProjectId">
+      <column name="ProjectId" />
+    </property>
+    <property name="StageId">
+      <column name="StageId" />
+    </property>
+	  <property name="Category">
+		  <column name="Category" />
+	  </property>
+    <property name="AssignedTo">
+      <column name="AssignedTo" />
+    </property>
+    <property name="Deadline">
+      <column name="Deadline" />
+    </property>
+	  <property name="Purpose">
+		  <column name="Purpose" />
+	  </property>
+	  <property name="Criteria">
+		  <column name="Criteria" />
+	  </property>
+    <property name="Tags">
+      <column name="Tags" />
+    </property>
+    <property name="Priority">
+      <column name="Priority" />
+    </property>
+	  <property name="ReportPeriod">
+		  <column name="ReportPeriod" />
+	  </property>
+    <property name="Sequence">
+      <column name="Sequence" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="StartDate">
+      <column name="StartDate" />
+    </property>
+    <property name="EndDate">
+      <column name="EndDate" />
+    </property>
+	  
+	  <property name="IsReportTimeRight">
+		  <column name="IsReportTimeRight" />
+	  </property>
+	  <property name="StatusId">
+      <column name="StatusId" />
+    </property>
+	  <property name="CheckedBy">
+		  <column name="CheckedBy" />
+	  </property>
+	  <property name="Manager">
+		  <column name="Manager" />
+	  </property>
+	  <property name="CustomerId">
+		  <column name="CustomerId" />
+	  </property>
+    <!--<property name="FirstStage">
+      <column name="FirstStage" />
+    </property>-->
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+	  
+    <set name="TaskDetailList" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="TaskId" />
+      <one-to-many class="TaskDetails" />
+    </set>
+  </class>
+</hibernate-mapping>

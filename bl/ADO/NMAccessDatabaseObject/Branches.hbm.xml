@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Branches" table="Branches">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="CustomerId">
+      <column name="CustomerId" />
+    </property>
+    <property name="NameInVietnamese">
+      <column name="NameInVietnamese" />
+    </property>
+    <property name="NameInSecondLanguage">
+      <column name="NameInSecondLanguage" />
+    </property>
+    <property name="Address">
+      <column name="Address" />
+    </property>
+    <property name="ProvinceId">
+      <column name="ProvinceId" />
+    </property>
+    <property name="Telephone">
+      <column name="Telephone" />
+    </property>
+    <property name="Website">
+      <column name="Website" />
+    </property>
+    <property name="FaxNumber">
+      <column name="FaxNumber" />
+    </property>
+  </class>
+</hibernate-mapping>

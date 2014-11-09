@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Products" table="Products">
+    <id name="ProductId">
+      <column name="ProductId" sql-type="varchar" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ProductCode">
+      <column name="ProductCode" />
+    </property>
+    <property name="BarCode">
+      <column name="BarCode" />
+    </property>
+    <property name="DueDate">
+      <column name="DueDate" />
+    </property>
+    <property name="CategoryId">
+      <column name="CategoryId" />
+    </property>
+    <property name="ManufactureId">
+      <column name="ManufactureId" />
+    </property>
+    <property name="ProductNameInVietnamese">
+      <column name="ProductNameInVietnamese" />
+    </property>
+    <property name="TypeId">
+      <column name="TypeId" />
+    </property>
+    <property name="GroupId">
+      <column name="GroupId" />
+    </property>
+    <property name="ProductUnit">
+      <column name="ProductUnit" />
+    </property>
+    <property name="ProductDescriptionInVietnamese">
+      <column name="ProductDescriptionInVietnamese" />
+    </property>
+    <property name="VATRate">
+      <column name="VATRate" />
+    </property>
+    <property name="ImportTaxRate">
+      <column name="ImportTaxRate" />
+    </property>
+    <property name="Discontinued">
+      <column name="Discontinued" />
+    </property>
+    <property name="Highlight">
+      <column name="Highlight" />
+    </property>
+    <property name="IsNew">
+      <column name="IsNew" />
+    </property>
+    <property name="IsEmpty">
+      <column name="IsEmpty" />
+    </property>
+    <property name="ShortDescription">
+      <column name="ShortDescription" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+	  <property name="LocationId">
+	  <column name="LocationId" />
+  </property>
+	  <property name="MACAddress">
+	  <column name="MACAddress" />
+  </property>
+	  <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+    <property name="Warranty">
+      <column name="Warranty" />
+    </property>
+    <property name="CostPrice">
+      <column name="CostPrice" />
+    </property>
+    <!--<property name="DefaultDiscount">
+      <column name="DefaultDiscount" />
+    </property>-->
+    <set name="ProductBOMs" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="ParentId" />
+      <one-to-many class="ProductBOMs" />
+    </set>
+    <set name="ProductDetailsList" lazy="true" cascade="delete">
+      <key column="ProductId" />
+      <one-to-many class="ProductDetails" />
+    </set>
+  </class>
+</hibernate-mapping>

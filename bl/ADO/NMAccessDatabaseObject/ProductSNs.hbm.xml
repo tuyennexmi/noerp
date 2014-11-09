@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="ProductSNs" table="ProductSNs">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="ProductId">
+      <column name="ProductId" />
+    </property>
+	  <property name="StockId">
+		  <column name="StockId" />
+	  </property>
+	  <property name="SerialNumber">
+      <column name="SerialNumber" />
+    </property>
+    <property name="ImportId">
+      <column name="ImportId" />
+    </property>
+    <property name="ImportDate">
+      <column name="ImportDate" />
+    </property>
+    <property name="ExportId">
+      <column name="ExportId" />
+    </property>
+    <property name="ExportDate">
+      <column name="ExportDate" />
+    </property>
+  </class>
+</hibernate-mapping>

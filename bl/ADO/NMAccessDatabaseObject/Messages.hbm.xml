@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Messages" table="Messages">
+    <id name="MessageId">
+      <column name="MessageId" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="MessageName">
+      <column name="MessageName" />
+    </property>
+    <property name="TypeId">
+      <column name="TypeId" />
+    </property>
+    <property name="Owner">
+      <column name="Owner" />
+    </property>
+    <property name="ReplyTo">
+      <column name="ReplyTo" />
+    </property>
+    <property name="SendTo">
+      <column name="SendTo" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+	  <property name="IsRead">
+		  <column name="IsRead" />
+	  </property>
+    <property name="AttachFile">
+      <column name="AttachFile" />
+    </property>
+    <property name="Publish">
+      <column name="Publish" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" />
+    </property>
+    <property name="CategoryId">
+      <column name="CategoryId" />
+    </property>
+    <property name="GroupId">
+      <column name="GroupId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

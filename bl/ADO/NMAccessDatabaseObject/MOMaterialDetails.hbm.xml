@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+	<class name="MOMaterialDetails" table="MOMaterialDetails">
+		<id name="OrdinalNumber">
+			<column name="OrdinalNumber" sql-type="int" not-null="true" />
+			<generator class="identity" />
+		</id>
+		<property name="ProductId">
+			<column name="ProductId" />
+		</property>
+		<property name="MOId">
+			<column name="MOId" />
+		</property>
+		<property name="Quantity">
+			<column name="Quantity" />
+		</property>
+		
+		<property name="ConsumedQuantity">
+			<column name="ConsumedQuantity" />
+		</property>
+
+		<property name="CreatedDate">
+			<column name="CreatedDate" />
+		</property>
+		<property name="CreatedBy">
+			<column name="CreatedBy" />
+		</property>
+		<property name="ModifiedDate">
+			<column name="ModifiedDate" />
+		</property>
+		<property name="ModifiedBy">
+			<column name="ModifiedBy" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Projects" table="Projects">
+    <id name="ProjectId">
+      <column name="ProjectId" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ProjectName">
+      <column name="ProjectName" />
+    </property>
+    <property name="CustomerId">
+      <column name="CustomerId" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" />
+    </property>
+	  <property name="PlannedTime">
+		  <column name="PlannedTime" />
+	  </property>
+    <property name="StartDate">
+      <column name="StartDate" />
+    </property>
+    <property name="EndDate">
+      <column name="EndDate" />
+    </property>
+    <property name="Escalation">
+      <column name="Escalation" />
+    </property>
+    <property name="TimeSheets">
+      <column name="TimeSheets" />
+    </property>
+    <property name="ManagedBy">
+      <column name="ManagedBy" />
+    </property>
+    <property name="Task">
+      <column name="Task" />
+    </property>
+    <property name="Issue">
+      <column name="Issue" />
+    </property>
+    <property name="Team">
+      <column name="Team" />
+    </property>
+    <property name="Stage">
+      <column name="Stage" />
+    </property>
+	  <property name="SalesForecast">
+		  <column name="SalesForecast" />
+	  </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+    <!--<set name="Stages" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="ProjectId" />
+      <one-to-many class="ProjectStages" />
+    </set>
+    <set name="Issues" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="ProjectId" />
+      <one-to-many class="Issues" />
+    </set>
+    <set name="ProjectTeams" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="ProjectId" />
+      <one-to-many class="ProjectTeams" />
+    </set>-->
+  </class>
+</hibernate-mapping>

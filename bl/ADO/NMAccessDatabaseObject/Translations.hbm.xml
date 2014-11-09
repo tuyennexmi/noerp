@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Translations" table="Translations">
+    <id name="Id">
+      <column name="Id" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="LanguageId">
+      <column name="LanguageId" />
+    </property>
+    <property name="OwnerId">
+      <column name="OwnerId" />
+    </property>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+    <property name="ShortDescription">
+      <column name="ShortDescription" />
+    </property>
+    <property name="Description" type="StringClob">
+      <column name="Description" />
+    </property>
+    <property name="Warranty">
+      <column name="Warranty" />
+    </property>
+    <property name="Address">
+      <column name="Address" />
+    </property>
+  </class>
+</hibernate-mapping>

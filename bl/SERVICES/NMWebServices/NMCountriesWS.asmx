@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="NMCountriesWS.asmx.cs" Class="NEXMI.NMCountriesWS" %>

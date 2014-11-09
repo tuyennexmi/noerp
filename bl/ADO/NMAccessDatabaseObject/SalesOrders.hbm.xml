@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="SalesOrders" table="SalesOrders">
+    <id name="OrderId">
+      <column name="OrderId" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="CustomerId">
+      <column name="CustomerId" />
+    </property>
+    <property name="Reference">
+      <column name="Reference" />
+    </property>
+    <property name="OrderDate">
+      <column name="OrderDate" />
+    </property>
+    <property name="DeliveryDate">
+      <column name="DeliveryDate" />
+    </property>
+    <property name="RepairDate">
+      <column name="RepairDate" />
+    </property>
+    <property name="OrderTypeId">
+      <column name="OrderTypeId" />
+    </property>
+	  <property name="OrderGroup">
+		  <column name="OrderGroup" />
+	  </property>
+    <property name="Incoterm">
+      <column name="Incoterm" />
+    </property>
+    <property name="ShippingPolicy">
+      <column name="ShippingPolicy" />
+    </property>
+    <property name="PaymentTerm">
+      <column name="PaymentTerm" />
+    </property>
+    <property name="Advances">
+      <column name="Advances" />
+    </property>
+    <property name="SalesPersonId">
+      <column name="SalesPersonId" />
+    </property>
+    <property name="SalesTeam">
+      <column name="SalesTeam" />
+    </property>
+    <property name="CategoryId">
+      <column name="CategoryId" />
+    </property>
+    <property name="Paid">
+      <column name="Paid" />
+    </property>
+    <property name="Delivered">
+      <column name="Delivered" />
+    </property>
+    <property name="OrderStatus">
+      <column name="OrderStatus" />
+    </property>
+    <property name="CreateInvoice">
+      <column name="CreateInvoice" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>    
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+    <property name="ExpirationDate">
+      <column name="ExpirationDate" />
+    </property>
+    <property name="StockId">
+      <column name="StockId" />
+    </property>
+    <property name="CarrierId">
+      <column name="CarrierId" />
+    </property>
+	  <property name="ApproveBy">
+		  <column name="ApproveBy" />
+	  </property>
+	  <property name="PaymentMethod">
+		  <column name="PaymentMethod" />
+	  </property>
+	  <property name="Transportation">
+		  <column name="Transportation" />
+	  </property>
+	  <property name="InvoiceTypeId">
+		  <column name="InvoiceTypeId" />
+	  </property>
+	  <property name="Amount">
+		  <column name="Amount" />
+	  </property>
+	  <property name="Tax">
+		  <column name="Tax" />
+	  </property>
+	  <property name="Discount">
+		  <column name="Discount" />
+	  </property>
+	  <property name="TotalAmount">
+		  <column name="TotalAmount" />
+	  </property>
+
+	  <property name="Deposit">
+		  <column name="Deposit" />
+	  </property>
+	  <property name="SetupFee">
+		  <column name="SetupFee" />
+	  </property>
+	  <property name="MaintainDate">
+		  <column name="MaintainDate" />
+	  </property>
+	  
+	  <set name="OrderDetailsList" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="OrderId" />
+      <one-to-many class="SalesOrderDetails" />
+    </set>
+  </class>
+</hibernate-mapping>

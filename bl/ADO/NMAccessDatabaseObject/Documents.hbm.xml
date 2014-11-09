@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Documents" table="Documents">
+    <id name="DocumentId">
+      <column name="DocumentId" sql-type="String" not-null="true" length="100" />
+      <generator class="assigned" />
+    </id>
+	  <property name="MFileID">
+		  <column name="MFileID" />
+	  </property>
+	  <property name="PredefinedRFID">
+		  <column name="PredefinedRFID" />
+	  </property>
+	  <property name="LocationId">
+		  <column name="LocationId" />
+	  </property>
+	  <property name="StoreLocationId">
+		<column name="StoreLocationId" />
+		</property>
+	  <property name="Direction">
+		  <column name="Direction" />
+	  </property>
+	  <property name="DocumentName">
+      <column name="DocumentName" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" />
+    </property>
+    <property name="CategoryId">
+      <column name="CategoryId" />
+    </property>
+    <property name="GroupId">
+      <column name="GroupId" />
+    </property>
+    <property name="TypeId">
+      <column name="TypeId" />
+    </property>
+    <property name="Owner">
+      <column name="Owner" />
+    </property>
+    <property name="DocumentUrl">
+      <column name="DocumentUrl" />
+    </property>
+    <property name="ShortDescription">
+      <column name="ShortDescription" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+	  
+	<property name="IsAlarm">
+	  <column name="IsAlarm" />
+	</property>
+	  <property name="CheckingOutDate">
+		  <column name="CheckingOutDate" />
+	  </property>
+	  <property name="CheckingOutTo">
+		  <column name="CheckingOutTo" />
+	  </property>
+	  <property name="Class">
+		  <column name="Class" />
+	  </property>
+	  <property name="Entity">
+		  <column name="Entity" />
+	  </property>
+	  <property name="Publish">
+      <column name="Publish" />
+    </property>
+    <property name="Highlight">
+      <column name="Highlight" />
+    </property>
+	  <property name="CreatedDate">
+		  <column name="CreatedDate" />
+	  </property>
+	  <property name="CreatedBy">
+		  <column name="CreatedBy" />
+	  </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+  </class>
+</hibernate-mapping>

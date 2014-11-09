@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Issues" table="Issues">
+    <id name="IssueId">
+      <column name="IssueId" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ProjectId">
+      <column name="ProjectId" />
+    </property>
+    <property name="StageId">
+      <column name="StageId" />
+    </property>
+    <property name="ContactId">
+      <column name="ContactId" />
+    </property>
+    <property name="IssueContent">
+      <column name="IssueContent" />
+    </property>
+    <property name="Priority">
+      <column name="Priority" />
+    </property>
+    <property name="Version">
+      <column name="Version" />
+    </property>
+    <property name="Progress">
+      <column name="Progress" />
+    </property>
+    <property name="UserId">
+      <column name="UserId" />
+    </property>
+    <property name="Tags">
+      <column name="Tags" />
+    </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="StatusId">
+      <column name="StatusId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <property name="TaskId">
+      <column name="TaskId" />
+    </property>
+    <property name="Email">
+      <column name="Email" />
+    </property>
+    <property name="FirstStage">
+      <column name="FirstStage" />
+    </property>
+  </class>
+</hibernate-mapping>

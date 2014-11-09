@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="PurchaseInvoices" table="PurchaseInvoices">
+    <id name="InvoiceId">
+      <column name="InvoiceId" sql-type="varchar" not-null="true" length="30" />
+      <generator class="assigned" />
+    </id>
+    <property name="InvoiceBatchId">
+      <column name="InvoiceBatchId" />
+    </property>
+    <property name="InvoiceDate">
+      <column name="InvoiceDate" />
+    </property>
+    <property name="InvoiceTypeId">
+      <column name="InvoiceTypeId" />
+    </property>
+    <property name="SupplierId">
+      <column name="SupplierId" />
+    </property>
+    <property name="CurrencyId">
+      <column name="CurrencyId" />
+    </property>
+    <property name="ExchangeRate">
+      <column name="ExchangeRate" />
+    </property>
+    <property name="DescriptionInVietnamese">
+      <column name="DescriptionInVietnamese" />
+    </property>
+    <property name="InvoiceStatus">
+      <column name="InvoiceStatus" />
+    </property>
+    <property name="ShipCost">
+      <column name="ShipCost" />
+    </property>
+    <property name="OtherCost">
+      <column name="OtherCost" />
+    </property>
+    <property name="Tax">
+      <column name="Tax" />
+    </property>
+    <property name="Discount">
+      <column name="Discount" />
+    </property>
+    <property name="Amount">
+      <column name="Amount" />
+    </property>
+    <property name="TotalAmount">
+      <column name="TotalAmount" />
+    </property>
+    <property name="Reference">
+      <column name="Reference" />
+    </property>
+	  <property name="SupplierReference">
+		  <column name="SupplierReference" />
+	  </property>
+    <property name="StockId">
+      <column name="StockId" />
+    </property>
+    <property name="BuyerId">
+      <column name="BuyerId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+    <set name="DetailsList" lazy="true" inverse="true" cascade="all-delete-orphan">
+      <key column="InvoiceId" />
+      <one-to-many class="PurchaseInvoiceDetails" />
+    </set>
+
+	  <set name="ReceiptList" lazy="true" inverse="true" cascade="all-delete-orphan">
+		  <key column="InvoiceId" />
+		  <one-to-many class="Receipts" />
+	  </set>
+	  <set name="PaymentList" lazy="true" inverse="true" cascade="all-delete-orphan">
+		  <key column="InvoiceId" />
+		  <one-to-many class="Payments" />
+	  </set>
+  </class>
+</hibernate-mapping>

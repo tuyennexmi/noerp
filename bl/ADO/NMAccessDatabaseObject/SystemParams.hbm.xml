@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="SystemParams" table="SystemParams">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="30" />
+      <generator class="assigned" />
+    </id>
+    <property name="ObjectName">
+      <column name="ObjectName" />
+    </property>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+    <property name="Value">
+      <column name="Value" />
+    </property>
+    <property name="Subject">
+      <column name="Subject" />
+    </property>
+    <property name="Contents">
+      <column name="Contents" />
+    </property>
+    <property name="Type">
+      <column name="Type" />
+    </property>
+    <property name="Email">
+      <column name="Email" />
+    </property>
+    <property name="ActionDate">
+      <column name="ActionDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CustomerType">
+      <column name="CustomerType" />
+    </property>
+    <property name="CustomerGroup">
+      <column name="CustomerGroup" />
+    </property>
+    <property name="Gender">
+      <column name="Gender" />
+    </property>
+  </class>
+</hibernate-mapping>

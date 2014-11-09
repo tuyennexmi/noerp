@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="ProductUnits" table="ProductUnits">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+    <property name="ProductCategoryId">
+      <column name="ProductCategoryId" />
+    </property>    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Permissions" table="Permissions">
+    <id name="Id">
+      <column name="Id" sql-type="int" not-null="true" />
+      <generator class="identity" />
+    </id>
+    <property name="FunctionId">
+      <column name="FunctionId" />
+    </property>
+    <property name="UserId">
+      <column name="UserId" />
+    </property>
+	  <property name="UserGroupId">
+		  <column name="UserGroupId" />
+	  </property>
+    <property name="PSelect">
+      <column name="PSelect" />
+    </property>
+    <property name="PInsert">
+      <column name="PInsert" />
+    </property>
+    <property name="PUpdate">
+      <column name="PUpdate" />
+    </property>
+	  <property name="Reconcile">
+		  <column name="Reconcile" />
+	  </property>
+    <property name="PDelete">
+      <column name="PDelete" />
+    </property>
+    <property name="Approval">
+      <column name="Approval" />
+    </property>
+    <property name="ViewAll">
+      <column name="ViewAll" />
+    </property>
+    <property name="Calculate">
+      <column name="Calculate" />
+    </property>
+    <property name="History">
+      <column name="History" />
+    </property>
+    <property name="ViewPrice">
+      <column name="ViewPrice" />
+    </property>
+    <property name="Export">
+      <column name="Export" />
+    </property>
+    <property name="PPrint">
+      <column name="PPrint" />
+    </property>
+    <property name="Duplicate">
+      <column name="Duplicate" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+	  <property name="ModifiedDate">
+		  <column name="ModifiedDate" />
+	  </property>
+	  <property name="ModifiedBy">
+		  <column name="ModifiedBy" />
+	  </property>
+  </class>
+</hibernate-mapping>

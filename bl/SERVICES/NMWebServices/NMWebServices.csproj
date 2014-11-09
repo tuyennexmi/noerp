@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1C75E39-E457-4302-93C1-42413A7CBFC2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEXMI</RootNamespace>
+    <AssemblyName>NMWebServices</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NMAccountNumbersWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMAccountNumbersWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMBanksWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMBanksWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMContactPersonsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMContactPersonsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMCountriesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMCountriesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMCurrenciesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMCurrenciesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMCustomerGroupsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMCustomerGroupsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMCustomersWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMCustomersWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMCustomerTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMCustomerTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMDepartmentsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMDepartmentsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMExchangeRatesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMExchangeRatesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMExportsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMExportsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMExportTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMExportTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMFeaturesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMFeaturesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMFunctionsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMFunctionsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMImportsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMImportsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMImportTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMImportTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMKindOfIndustriesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMKindOfIndustriesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMModulesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMModulesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMMonthlyAccountPayableWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMMonthlyAccountPayableWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMMonthlyAccountReceivableWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMMonthlyAccountReceivableWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMMonthlyCashBalancesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMMonthlyCashBalancesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMMonthlyInventoryControlWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMMonthlyInventoryControlWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMOrdersWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMOrdersWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMOrderTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMOrderTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMPaymentsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMPaymentsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMPermissionsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMPermissionsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMPricesForSalesInvoiceWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMPricesForSalesInvoiceWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMProductCategoriesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMProductCategoriesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMProductsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMProductsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMProvincesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMProvincesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMReceiptsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMReceiptsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMReceiptTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMReceiptTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMRequirementsWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMRequirementsWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMRequirementTypesWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMRequirementTypesWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMStocksWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMStocksWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMTimeKeepingWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMTimeKeepingWS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMUsersWS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NMUsersWS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NMAccountNumbersWS.asmx" />
+    <Content Include="NMBanksWS.asmx" />
+    <Content Include="NMContactPersonsWS.asmx" />
+    <Content Include="NMCountriesWS.asmx" />
+    <Content Include="NMCurrenciesWS.asmx" />
+    <Content Include="NMCustomerGroupsWS.asmx" />
+    <Content Include="NMCustomersWS.asmx" />
+    <Content Include="NMCustomerTypesWS.asmx" />
+    <Content Include="NMDepartmentsWS.asmx" />
+    <Content Include="NMExchangeRatesWS.asmx" />
+    <Content Include="NMExportsWS.asmx" />
+    <Content Include="NMExportTypesWS.asmx" />
+    <Content Include="NMFeaturesWS.asmx" />
+    <Content Include="NMFunctionsWS.asmx" />
+    <Content Include="NMImportsWS.asmx" />
+    <Content Include="NMImportTypesWS.asmx" />
+    <Content Include="NMKindOfIndustriesWS.asmx" />
+    <Content Include="NMModulesWS.asmx" />
+    <Content Include="NMMonthlyAccountPayableWS.asmx" />
+    <Content Include="NMMonthlyAccountReceivableWS.asmx" />
+    <Content Include="NMMonthlyCashBalancesWS.asmx" />
+    <Content Include="NMMonthlyInventoryControlWS.asmx" />
+    <Content Include="NMOrdersWS.asmx" />
+    <Content Include="NMOrderTypesWS.asmx" />
+    <Content Include="NMPaymentsWS.asmx" />
+    <Content Include="NMPermissionsWS.asmx" />
+    <Content Include="NMPricesForSalesInvoiceWS.asmx" />
+    <Content Include="NMProductCategoriesWS.asmx" />
+    <Content Include="NMProductsWS.asmx" />
+    <Content Include="NMProvincesWS.asmx" />
+    <Content Include="NMReceiptsWS.asmx" />
+    <Content Include="NMReceiptTypesWS.asmx" />
+    <Content Include="NMRequirementsWS.asmx" />
+    <Content Include="NMRequirementTypesWS.asmx" />
+    <Content Include="NMStocksWS.asmx" />
+    <Content Include="NMTimeKeepingWS.asmx" />
+    <Content Include="NMUsersWS.asmx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NMAccountNumbersWS.asmx.cs">
+      <DependentUpon>NMAccountNumbersWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMBanksWS.asmx.cs">
+      <DependentUpon>NMBanksWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMContactPersonsWS.asmx.cs">
+      <DependentUpon>NMContactPersonsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMCountriesWS.asmx.cs">
+      <DependentUpon>NMCountriesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMCurrenciesWS.asmx.cs">
+      <DependentUpon>NMCurrenciesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMCustomerGroupsWS.asmx.cs">
+      <DependentUpon>NMCustomerGroupsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMCustomersWS.asmx.cs">
+      <DependentUpon>NMCustomersWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMCustomerTypesWS.asmx.cs">
+      <DependentUpon>NMCustomerTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMDepartmentsWS.asmx.cs">
+      <DependentUpon>NMDepartmentsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMExchangeRatesWS.asmx.cs">
+      <DependentUpon>NMExchangeRatesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMExportsWS.asmx.cs">
+      <DependentUpon>NMExportsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMExportTypesWS.asmx.cs">
+      <DependentUpon>NMExportTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMFeaturesWS.asmx.cs">
+      <DependentUpon>NMFeaturesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMFunctionsWS.asmx.cs">
+      <DependentUpon>NMFunctionsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMImportsWS.asmx.cs">
+      <DependentUpon>NMImportsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMImportTypesWS.asmx.cs">
+      <DependentUpon>NMImportTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMKindOfIndustriesWS.asmx.cs">
+      <DependentUpon>NMKindOfIndustriesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMModulesWS.asmx.cs">
+      <DependentUpon>NMModulesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMMonthlyAccountPayableWS.asmx.cs">
+      <DependentUpon>NMMonthlyAccountPayableWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMMonthlyAccountReceivableWS.asmx.cs">
+      <DependentUpon>NMMonthlyAccountReceivableWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMMonthlyCashBalancesWS.asmx.cs">
+      <DependentUpon>NMMonthlyCashBalancesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMMonthlyInventoryControlWS.asmx.cs">
+      <DependentUpon>NMMonthlyInventoryControlWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMOrdersWS.asmx.cs">
+      <DependentUpon>NMOrdersWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMOrderTypesWS.asmx.cs">
+      <DependentUpon>NMOrderTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMPaymentsWS.asmx.cs">
+      <DependentUpon>NMPaymentsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMPermissionsWS.asmx.cs">
+      <DependentUpon>NMPermissionsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMPricesForSalesInvoiceWS.asmx.cs">
+      <DependentUpon>NMPricesForSalesInvoiceWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMProductCategoriesWS.asmx.cs">
+      <DependentUpon>NMProductCategoriesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMProductsWS.asmx.cs">
+      <DependentUpon>NMProductsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMProvincesWS.asmx.cs">
+      <DependentUpon>NMProvincesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMReceiptsWS.asmx.cs">
+      <DependentUpon>NMReceiptsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMReceiptTypesWS.asmx.cs">
+      <DependentUpon>NMReceiptTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMRequirementsWS.asmx.cs">
+      <DependentUpon>NMRequirementsWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMRequirementTypesWS.asmx.cs">
+      <DependentUpon>NMRequirementTypesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMStocksWS.asmx.cs">
+      <DependentUpon>NMStocksWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMTimeKeepingWS.asmx.cs">
+      <DependentUpon>NMTimeKeepingWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NMUsersWS.asmx.cs">
+      <DependentUpon>NMUsersWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6780</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

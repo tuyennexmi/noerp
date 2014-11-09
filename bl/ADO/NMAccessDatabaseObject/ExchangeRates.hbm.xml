@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="ExchangeRates" table="ExchangeRates">
+    <composite-id>
+      <key-property name="CurrencyId" column="CurrencyId" />
+      <key-property name="DateOfRate" column="DateOfRate" />
+    </composite-id>
+    <property name="Rate">
+      <column name="Rate" />
+    </property>
+    <property name="Discontinued">
+      <column name="Discontinued" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+  </class>
+</hibernate-mapping>

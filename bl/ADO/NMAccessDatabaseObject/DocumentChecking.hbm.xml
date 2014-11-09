@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="DocumentChecking" table="DocumentChecking">
+	  <id name="Id">
+		  <column name="Id" sql-type="int" not-null="true" />
+		  <generator class="identity" />
+	  </id>
+	  <property name="DocumentId">
+      <column name="DocumentId" />
+    </property>
+	  <property name="Time">
+		  <column name="Time" />
+	  </property>
+    <property name="InOut">
+      <column name="InOut" />
+    </property>
+    <property name="Person">
+      <column name="Person" />
+    </property>
+	  <property name="CheckBy">
+		  <column name="CheckBy" />
+	  </property>
+    
+  </class>
+</hibernate-mapping>

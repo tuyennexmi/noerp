@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NEXMI" assembly="NEXMI">
+  <class name="Functions" table="Functions">
+    <id name="Id">
+      <column name="Id" sql-type="String" not-null="true" length="20" />
+      <generator class="assigned" />
+    </id>
+    <property name="ModuleId">
+      <column name="ModuleId" />
+    </property>
+    <property name="Name">
+      <column name="Name" />
+    </property>
+	  <property name="NameInEnglish">
+		  <column name="NameInEnglish" />
+	  </property>
+	  <property name="NameInKorea">
+		  <column name="NameInKorea" />
+	  </property>
+    <property name="Description">
+      <column name="Description" />
+    </property>
+    <property name="Action">
+      <column name="Action" />
+    </property>
+	  <property name="FormName">
+		  <column name="FormName" />
+	  </property>
+    <property name="OrdinalNumber">
+      <column name="OrdinalNumber" />
+    </property>
+    <property name="ParentId">
+      <column name="ParentId" />
+    </property>
+    <property name="CreatedDate">
+      <column name="CreatedDate" />
+    </property>
+    <property name="CreatedBy">
+      <column name="CreatedBy" />
+    </property>
+    <property name="Active">
+      <column name="Active" />
+    </property>
+	  <property name="Icon">		  
+		  <column name="Icon" />
+	  </property>
+    <set name="PermissionsList" lazy="true" cascade="delete">
+      <key column="FunctionId" />
+      <one-to-many class="Permissions" />
+    </set>
+  </class>
+</hibernate-mapping>

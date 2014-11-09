@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8386FB36-DF69-4C32-A08B-A4BF96B3556A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEXMI</RootNamespace>
+    <AssemblyName>NEXMI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\DLLLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\dlllibrary\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NMConstants, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dlllibrary\NMConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendars.cs" />
+    <Compile Include="CalendarsAccesser.cs" />
+    <Compile Include="CloseMonths.cs" />
+    <Compile Include="CloseMonthsAccesser.cs" />
+    <Compile Include="CloseMonthDetails.cs" />
+    <Compile Include="CloseMonthDetailsAccesser.cs" />
+    <Compile Include="MovementLog.cs" />
+    <Compile Include="MovementLogAccesser.cs" />
+    <Compile Include="ExchangeRates.cs" />
+    <Compile Include="ExchangeRatesAccesser.cs" />
+    <Compile Include="MFILES_RFID.cs" />
+    <Compile Include="MFILES_RFIDAccesser.cs" />
+    <Compile Include="ProductPorts.cs" />
+    <Compile Include="ProductPortsAccesser.cs" />
+    <Compile Include="Locations.cs" />
+    <Compile Include="LocationsAccesser.cs" />
+    <Compile Include="Interface.cs" />
+    <Compile Include="InterfaceAccesser.cs" />
+    <Compile Include="Jobs.cs" />
+    <Compile Include="JobsAccesser.cs" />
+    <Compile Include="MOMaterialDetails.cs" />
+    <Compile Include="MOMaterialDetailsAccesser.cs" />
+    <Compile Include="ManufactureOrders.cs" />
+    <Compile Include="ManufactureOrdersAccesser.cs" />
+    <Compile Include="MasterPlanningDetails.cs" />
+    <Compile Include="MasterPlanningDetailsAccesser.cs" />
+    <Compile Include="MasterPlannings.cs" />
+    <Compile Include="MasterPlanningsAccesser.cs" />
+    <Compile Include="DailyReports.cs" />
+    <Compile Include="DailyReportsAccesser.cs" />
+    <Compile Include="MonthlyGeneralJournals.cs" />
+    <Compile Include="MonthlyGeneralJournalsAccesser.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsAccesser.cs" />
+    <Compile Include="ProductSNs.cs" />
+    <Compile Include="ProductSNsAccesser.cs" />
+    <Compile Include="ProductBOMs.cs" />
+    <Compile Include="ProductBOMsAccesser.cs" />
+    <Compile Include="Stages.cs" />
+    <Compile Include="StagesAccesser.cs" />
+    <Compile Include="SystemParams.cs" />
+    <Compile Include="SystemParamsAccesser.cs" />
+    <Compile Include="Translations.cs" />
+    <Compile Include="TranslationsAccesser.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="MessagesAccesser.cs" />
+    <Compile Include="Leads.cs" />
+    <Compile Include="LeadsAccesser.cs" />
+    <Compile Include="Parameters.cs" />
+    <Compile Include="ParametersAccesser.cs" />
+    <Compile Include="Statuses.cs" />
+    <Compile Include="StatusesAccesser.cs" />
+    <Compile Include="Documents.cs" />
+    <Compile Include="DocumentsAccesser.cs" />
+    <Compile Include="Issues.cs" />
+    <Compile Include="IssuesAccesser.cs" />
+    <Compile Include="ProjectTeams.cs" />
+    <Compile Include="ProjectTeamsAccesser.cs" />
+    <Compile Include="TaskDetails.cs" />
+    <Compile Include="TaskDetailsAccesser.cs" />
+    <Compile Include="Tasks.cs" />
+    <Compile Include="TasksAccesser.cs" />
+    <Compile Include="ProjectStages.cs" />
+    <Compile Include="ProjectStagesAccesser.cs" />
+    <Compile Include="Projects.cs" />
+    <Compile Include="ProjectsAccesser.cs" />
+    <Compile Include="ExportDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportDetailsAccesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exports.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportsAccesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HandingOver.cs" />
+    <Compile Include="HandingOverAccesser.cs" />
+    <Compile Include="Areas.cs" />
+    <Compile Include="AreasAccesser.cs" />
+    <Compile Include="PurchaseOrderDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrderDetailsAccesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrdersAccesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts.cs" />
+    <Compile Include="ShiftsAccesser.cs" />
+    <Compile Include="Types.cs" />
+    <Compile Include="TypesAccesser.cs" />
+    <Compile Include="Images.cs" />
+    <Compile Include="ImagesAccesser.cs" />
+    <Compile Include="KindOfEnterprises.cs" />
+    <Compile Include="KindOfEnterprisesAccesser.cs" />
+    <Compile Include="ProductUnits.cs" />
+    <Compile Include="ProductUnitsAccesser.cs" />
+    <Compile Include="AccountNumbers.cs" />
+    <Compile Include="AccountNumbersAccesser.cs" />
+    <Compile Include="AutomaticValues.cs" />
+    <Compile Include="AutomaticValuesAccesser.cs" />
+    <Compile Include="BankOfCustomers.cs" />
+    <Compile Include="BankOfCustomersAccesser.cs" />
+    <Compile Include="Banks.cs" />
+    <Compile Include="BanksAccesser.cs" />
+    <Compile Include="Branches.cs" />
+    <Compile Include="BranchesAccesser.cs" />
+    <Compile Include="Currencies.cs" />
+    <Compile Include="CurrenciesAccesser.cs" />
+    <Compile Include="CustomerDetails.cs" />
+    <Compile Include="CustomerDetailsAccesser.cs" />
+    <Compile Include="Customers.cs" />
+    <Compile Include="CustomersAccesser.cs" />
+    <Compile Include="Departments.cs" />
+    <Compile Include="DepartmentsAccesser.cs" />
+    <Compile Include="DocumentChecking.cs" />
+    <Compile Include="DocumentCheckingAccesser.cs" />
+    <Compile Include="Features.cs" />
+    <Compile Include="FeaturesAccesser.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="FunctionsAccesser.cs" />
+    <Compile Include="ImportDetails.cs" />
+    <Compile Include="ImportDetailsAccesser.cs" />
+    <Compile Include="Imports.cs" />
+    <Compile Include="ImportsAccesser.cs" />
+    <Compile Include="KindOfIndustries.cs" />
+    <Compile Include="KindOfIndustriesAccesser.cs" />
+    <Compile Include="Modules.cs" />
+    <Compile Include="ModulesAccesser.cs" />
+    <Compile Include="MonthlyInventoryControl.cs" />
+    <Compile Include="MonthlyInventoryControlAccesser.cs" />
+    <Compile Include="SalesOrderDetails.cs" />
+    <Compile Include="SalesOrderDetailsAccesser.cs" />
+    <Compile Include="SalesOrders.cs" />
+    <Compile Include="SalesOrdersAccesser.cs" />
+    <Compile Include="Payments.cs" />
+    <Compile Include="PaymentsAccesser.cs" />
+    <Compile Include="Permissions.cs" />
+    <Compile Include="PermissionsAccesser.cs" />
+    <Compile Include="PricesForSalesInvoice.cs" />
+    <Compile Include="PricesForSalesInvoiceAccesser.cs" />
+    <Compile Include="Categories.cs" />
+    <Compile Include="CategoriesAccesser.cs" />
+    <Compile Include="CategoryDetails.cs" />
+    <Compile Include="CategoryDetailsAccesser.cs" />
+    <Compile Include="ProductDetails.cs" />
+    <Compile Include="ProductDetailsAcceser.cs" />
+    <Compile Include="ProductInStocks.cs" />
+    <Compile Include="ProductInStocksAccesser.cs" />
+    <Compile Include="Products.cs" />
+    <Compile Include="ProductsAccesser.cs" />
+    <Compile Include="PurchaseInvoiceDetails.cs" />
+    <Compile Include="PurchaseInvoiceDetailsAccesser.cs" />
+    <Compile Include="PurchaseInvoices.cs" />
+    <Compile Include="PurchaseInvoicesAccesser.cs" />
+    <Compile Include="Receipts.cs" />
+    <Compile Include="ReceiptsAccesser.cs" />
+    <Compile Include="RequirementDetails.cs" />
+    <Compile Include="RequirementDetailsAccesser.cs" />
+    <Compile Include="Requirements.cs" />
+    <Compile Include="RequirementsAccesser.cs" />
+    <Compile Include="SalesInvoiceDetails.cs" />
+    <Compile Include="SalesInvoiceDetailsAccesser.cs" />
+    <Compile Include="SalesInvoices.cs" />
+    <Compile Include="SalesInvoicesAccesser.cs" />
+    <Compile Include="Stocks.cs" />
+    <Compile Include="StocksAccesser.cs" />
+    <Compile Include="TimeKeeping.cs" />
+    <Compile Include="TimeKeepingAccesser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountNumbers.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutomaticValues.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BankOfCustomers.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Banks.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Branches.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Currencies.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomerDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Customers.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Departments.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DocumentChecking.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ImportDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Imports.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Features.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KindOfIndustries.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SalesOrderDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SalesOrders.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Payments.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MonthlyInventoryControl.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Functions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Permissions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PricesForSalesInvoice.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TimeKeeping.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductInStocks.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Stocks.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SalesInvoiceDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SalesInvoices.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RequirementDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Requirements.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Receipts.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Categories.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CategoryDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PurchaseInvoiceDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PurchaseInvoices.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Products.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductUnits.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KindOfEnterprises.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Types.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Shifts.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExportDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exports.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandingOver.hbm.xml" />
+    <EmbeddedResource Include="PurchaseOrderDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseOrders.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Projects.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectStages.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tasks.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TaskDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectTeams.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Issues.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Documents.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Statuses.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Parameters.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Leads.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Translations.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SystemParams.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Stages.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductBOMs.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductSNs.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Settings.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MonthlyGeneralJournals.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calendars.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DailyReports.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MasterPlannings.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MasterPlanningDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ManufactureOrders.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MOMaterialDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Jobs.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Interface.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CloseMonths.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CloseMonthDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Locations.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductPorts.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MFILES_RFID.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExchangeRates.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MovementLog.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

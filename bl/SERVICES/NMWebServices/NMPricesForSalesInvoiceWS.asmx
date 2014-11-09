@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="NMPricesForSalesInvoiceWS.asmx.cs" Class="NEXMI.NMPricesForSalesInvoiceWS" %>
